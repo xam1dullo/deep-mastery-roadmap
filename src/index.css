@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+
+/* Deep Mastery Roadmap — Dark OLED design system (indigo + progress green) */
+@theme {
+  --color-bg: #0a0a0f;
+  --color-surface: #111119;
+  --color-surface-2: #171722;
+  --color-border: #24242e;
+  --color-border-strong: #33333f;
+
+  --color-fg: #ececf1;
+  --color-muted: #a2a2b0;
+  --color-faint: #6b6b78;
+
+  --color-primary: #6366f1;
+  --color-primary-strong: #4f46e5;
+  --color-on-primary: #ffffff;
+
+  --color-accent: #22c55e;
+  --color-accent-strong: #16a34a;
+
+  --color-warn: #f59e0b;
+  --color-danger: #ef4444;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    background: var(--color-bg);
+    color-scheme: dark;
+  }
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01';
+  }
+  /* tabular figures for all metrics */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border-strong);
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-faint);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fade-up 0.35s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

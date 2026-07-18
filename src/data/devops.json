@@ -1,0 +1,903 @@
+{
+  "meta": {
+    "title": "DevOps kurs — o'tilgan darslar",
+    "subtitle": "73 dars · to'liq amaliy kurs",
+    "author": "Mirafzal Shavkatov",
+    "source": "https://telegra.ph/DevOps-kurs-otilgan-darslar-royxati-10-10",
+    "date": "2025-10-10",
+    "totalLessons": 73
+  },
+  "modules": [
+    {
+      "id": 1,
+      "title": "Foundations: Linux, Git & Networking",
+      "short": "Foundations",
+      "range": "1–10",
+      "lessons": [
+        {
+          "n": 1,
+          "title": "Introduction & Course Overview",
+          "detail": "Introduction. Kurs mundarijasi.",
+          "tags": [
+            "Introduction",
+            "Course overview"
+          ]
+        },
+        {
+          "n": 2,
+          "title": "Linux Basic Commands",
+          "detail": "Linux asosiy buyruqlari.",
+          "tags": [
+            "Linux",
+            "CLI"
+          ]
+        },
+        {
+          "n": 3,
+          "title": "Linux — Continued",
+          "detail": "Linux",
+          "tags": [
+            "Linux"
+          ]
+        },
+        {
+          "n": 4,
+          "title": "Linux Users, Package Management, Filesystems",
+          "detail": "Linux users, package management, filesystems",
+          "tags": [
+            "Linux",
+            "users",
+            "package management",
+            "filesystems"
+          ]
+        },
+        {
+          "n": 5,
+          "title": "Git, GitHub & Networking Intro",
+          "detail": "Git, Github. Networking introduction",
+          "tags": [
+            "Git",
+            "GitHub",
+            "Networking"
+          ]
+        },
+        {
+          "n": 6,
+          "title": "Networking: OSI, IP, Subnetting",
+          "detail": "Networking. OSI modeli, private and public IP; IPv4 and IPv6; Subnetting; CIDR, protocols",
+          "tags": [
+            "Networking",
+            "OSI",
+            "IPv4",
+            "IPv6",
+            "Subnetting",
+            "CIDR"
+          ]
+        },
+        {
+          "n": 7,
+          "title": "Networking: Routing, NAT, Firewall",
+          "detail": "Networking - routing, NAT (SNAT), Firewall",
+          "tags": [
+            "Networking",
+            "Routing",
+            "NAT",
+            "SNAT",
+            "Firewall"
+          ]
+        },
+        {
+          "n": 8,
+          "title": "VPN, WireGuard & Ubuntu Setup",
+          "detail": "VPN, wireguard, Ubuntu initial setup, nginx",
+          "tags": [
+            "VPN",
+            "WireGuard",
+            "Ubuntu",
+            "nginx"
+          ]
+        },
+        {
+          "n": 9,
+          "title": "App Deployment: Nginx, Certbot, Node.js, Django",
+          "detail": "App deployment practice. Nginx, certbot, node.js, python, django deployment",
+          "tags": [
+            "Nginx",
+            "Certbot",
+            "Node.js",
+            "Python",
+            "Django"
+          ]
+        },
+        {
+          "n": 10,
+          "title": "Django WSGI & Laravel Deployment",
+          "detail": "App deployment practice. Python Django WSGI, PHP Laravel deployment with php-fpm",
+          "tags": [
+            "Python",
+            "Django",
+            "WSGI",
+            "PHP",
+            "Laravel",
+            "php-fpm"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Docker & Containers",
+      "short": "Docker",
+      "range": "11–14",
+      "lessons": [
+        {
+          "n": 11,
+          "title": "Docker: Containers, Images, Volumes",
+          "detail": "Docker. Containers, images, volumes.",
+          "tags": [
+            "Docker",
+            "containers",
+            "images",
+            "volumes"
+          ]
+        },
+        {
+          "n": 12,
+          "title": "Dockerfile, Docker Compose & Networking",
+          "detail": "Docker davomi. Dockerfile, Docker compose, docker network, volumes.",
+          "tags": [
+            "Docker",
+            "Dockerfile",
+            "Docker Compose",
+            "Docker network",
+            "volumes"
+          ]
+        },
+        {
+          "n": 13,
+          "title": "Docker Swarm & Image Layers",
+          "detail": "Docker swarm. Container registry. Docker image layers. Docker cache.",
+          "tags": [
+            "Docker Swarm",
+            "container registry",
+            "Docker image layers",
+            "Docker cache"
+          ]
+        },
+        {
+          "n": 14,
+          "title": "Docker Swarm Networking & Multi-Stage Builds",
+          "detail": "Docker swarm network, rolling update with zero downtime. Connect load balancer to Docker swarm cluster. Docker multi-stage build. Docker scratch base image.",
+          "tags": [
+            "Docker Swarm",
+            "rolling update",
+            "load balancer",
+            "multi-stage build",
+            "scratch base image"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "CI/CD & Automation",
+      "short": "CI/CD",
+      "range": "15–26",
+      "lessons": [
+        {
+          "n": 15,
+          "title": "CI/CD Automation Basics",
+          "detail": "CI/CD. Automation for manual deployment. Automation for docker deployment.",
+          "tags": [
+            "CI/CD",
+            "automation",
+            "Docker"
+          ]
+        },
+        {
+          "n": 16,
+          "title": "CI/CD for Django & PostgreSQL",
+          "detail": "CI/CD. Python, Django. Postgresql",
+          "tags": [
+            "CI/CD",
+            "Python",
+            "Django",
+            "PostgreSQL"
+          ]
+        },
+        {
+          "n": 17,
+          "title": "Production CI/CD: Django, Docker, Nginx, Load Balancer",
+          "detail": "CI/CD. Python, Django with docker, nginx, postgres on another host, load balancer. Production deployment.",
+          "tags": [
+            "CI/CD",
+            "Django",
+            "Docker",
+            "nginx",
+            "PostgreSQL",
+            "load balancer"
+          ]
+        },
+        {
+          "n": 18,
+          "title": "High-Availability Deployment & Raft",
+          "detail": "CI/CD. High available app, deploy. Raft protocol.",
+          "tags": [
+            "CI/CD",
+            "High Availability",
+            "Raft protocol"
+          ]
+        },
+        {
+          "n": 19,
+          "title": "Postgres HA: Patroni, Etcd, HAProxy",
+          "detail": "Postgres HA setup. Patroni, Etcd, Haproxy. (Bu dars bepul, sifati pastligi uchun)",
+          "tags": [
+            "PostgreSQL",
+            "Patroni",
+            "Etcd",
+            "HAProxy",
+            "High Availability"
+          ],
+          "note": "Bu dars bepul, sifati pastligi uchun — free lesson, noted as lower quality."
+        },
+        {
+          "n": 20,
+          "title": "Django Celery with Redis",
+          "detail": "Python Django Celery with redis",
+          "tags": [
+            "Python",
+            "Django",
+            "Celery",
+            "Redis"
+          ]
+        },
+        {
+          "n": 21,
+          "title": "Spring Microservices with PostgreSQL",
+          "detail": "Java, Spring example 2 microservices with postgres, CI/CD for it",
+          "tags": [
+            "Java",
+            "Spring",
+            "microservices",
+            "PostgreSQL",
+            "CI/CD"
+          ]
+        },
+        {
+          "n": 22,
+          "title": "GitHub Actions Reusable Workflows, Golang CI/CD",
+          "detail": "Github actions reusable workflows. Golang, Gin framework CI/CD. Node js websocket demo.",
+          "tags": [
+            "GitHub Actions",
+            "Golang",
+            "Gin",
+            "Node.js",
+            "WebSocket"
+          ]
+        },
+        {
+          "n": 23,
+          "title": "Self-Hosted Runners: GitHub Actions & GitLab CE",
+          "detail": "Github action self-hosted runners. Gitlab CE (Community Edition), CI/CD, self-hosted runners.",
+          "tags": [
+            "GitHub Actions",
+            "self-hosted runners",
+            "GitLab CE",
+            "CI/CD"
+          ]
+        },
+        {
+          "n": 24,
+          "title": "GitLab CE: Registry, Runners, Webhooks",
+          "detail": "Gitlab CE: container registry, running jobs on tagged runners, notifications to telegram, webhooks, object storage intro, info about package repositories and feature flags.",
+          "tags": [
+            "GitLab CE",
+            "container registry",
+            "webhooks",
+            "Telegram",
+            "object storage",
+            "feature flags"
+          ]
+        },
+        {
+          "n": 25,
+          "title": "CI/CD with Jenkins",
+          "detail": "CI/CD: Jenkins",
+          "tags": [
+            "CI/CD",
+            "Jenkins"
+          ]
+        },
+        {
+          "n": 26,
+          "title": "CI/CD with TeamCity",
+          "detail": "CI/CD: Teamcity",
+          "tags": [
+            "CI/CD",
+            "TeamCity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Infrastructure as Code",
+      "short": "IaC",
+      "range": "27–32",
+      "lessons": [
+        {
+          "n": 27,
+          "title": "Terraform Basics",
+          "detail": "Infrastructure as Code. Terraform.",
+          "tags": [
+            "IaC",
+            "Terraform"
+          ]
+        },
+        {
+          "n": 28,
+          "title": "Terraform Continued",
+          "detail": "Infrastructure as Code. Terraform davomi.",
+          "tags": [
+            "IaC",
+            "Terraform"
+          ]
+        },
+        {
+          "n": 29,
+          "title": "Terraform Modules",
+          "detail": "Infrastructure as Code. Terraform modules",
+          "tags": [
+            "IaC",
+            "Terraform",
+            "modules"
+          ]
+        },
+        {
+          "n": 30,
+          "title": "Terraform Backend: S3 & State Locking",
+          "detail": "Infrastructure as Code. Terraform backend with s3 object storage and state locking",
+          "tags": [
+            "IaC",
+            "Terraform",
+            "S3",
+            "state locking"
+          ]
+        },
+        {
+          "n": 31,
+          "title": "Ansible Basics",
+          "detail": "Infrastructure as Code. Ansible.",
+          "tags": [
+            "IaC",
+            "Ansible"
+          ]
+        },
+        {
+          "n": 32,
+          "title": "Ansible Galaxy & Virtual Lab",
+          "detail": "Infrastructure as Code. Ansible galaxy. Virtual lab overview for students.",
+          "tags": [
+            "IaC",
+            "Ansible",
+            "Ansible Galaxy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Observability: Monitoring & Logging",
+      "short": "Observability",
+      "range": "33–37",
+      "lessons": [
+        {
+          "n": 33,
+          "title": "Monitoring: Grafana, Prometheus, Node Exporter",
+          "detail": "Observability: Monitoring. Grafana, Prometheus, Node exporter.",
+          "tags": [
+            "Observability",
+            "Grafana",
+            "Prometheus",
+            "Node exporter"
+          ]
+        },
+        {
+          "n": 34,
+          "title": "Grafana Dashboards & PromQL",
+          "detail": "Observability. Monitoring. Build own dashboard with Grafana. PromQL",
+          "tags": [
+            "Grafana",
+            "PromQL",
+            "Monitoring"
+          ]
+        },
+        {
+          "n": 35,
+          "title": "Alertmanager & Telegram Alerts",
+          "detail": "Alertmanager. Alerts to telegram group. Info about tmux and system load.",
+          "tags": [
+            "Alertmanager",
+            "Telegram",
+            "tmux",
+            "system load"
+          ]
+        },
+        {
+          "n": 36,
+          "title": "Logging: Grafana Loki, Alloy, Promtail",
+          "detail": "Logging: Grafana Loki, Alloy, Promtail",
+          "tags": [
+            "Logging",
+            "Grafana Loki",
+            "Alloy",
+            "Promtail"
+          ]
+        },
+        {
+          "n": 37,
+          "title": "ELK Stack Logging",
+          "detail": "Logging. ELK Stack: Elasticsearch, Logstash, Kibana",
+          "tags": [
+            "Logging",
+            "Elasticsearch",
+            "Logstash",
+            "Kibana"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Kubernetes",
+      "short": "Kubernetes",
+      "range": "38–52",
+      "lessons": [
+        {
+          "n": 38,
+          "title": "Tracing Demo & Kubernetes Intro",
+          "detail": "O'xshamagan tracing demo. Kubernetes introduction.",
+          "tags": [
+            "Kubernetes",
+            "tracing"
+          ]
+        },
+        {
+          "n": 39,
+          "title": "ReplicaSet, Deployment & Rolling Update",
+          "detail": "Kubernetes. ReplicaSet. Deployment. Rolling update.",
+          "tags": [
+            "Kubernetes",
+            "ReplicaSet",
+            "Deployment",
+            "rolling update"
+          ]
+        },
+        {
+          "n": 40,
+          "title": "DaemonSet, StatefulSet, Job, CronJob",
+          "detail": "Kubernetes. DaemonSet, StatefulSet, Job, CronJob. Services: ClusterIP",
+          "tags": [
+            "Kubernetes",
+            "DaemonSet",
+            "StatefulSet",
+            "Job",
+            "CronJob",
+            "ClusterIP"
+          ]
+        },
+        {
+          "n": 41,
+          "title": "Kubernetes Services",
+          "detail": "Kubernetes. Services: ClusterIP, NodePort, LoadBalancer, ExternalName",
+          "tags": [
+            "Kubernetes",
+            "ClusterIP",
+            "NodePort",
+            "LoadBalancer",
+            "ExternalName"
+          ]
+        },
+        {
+          "n": 42,
+          "title": "Cluster Setup with Kubeadm & Namespaces",
+          "detail": "Kubernetes. Kubeadm bilan Kubernetes cluster yaratish. Kubernetes namespaces.",
+          "tags": [
+            "Kubernetes",
+            "kubeadm",
+            "namespaces"
+          ]
+        },
+        {
+          "n": 43,
+          "title": "Kubernetes Storage: PV, PVC, CSI",
+          "detail": "Kubernetes storage. Volume, Persistent Volume, Persistent Volume Claim, Storage Class, CSI.",
+          "tags": [
+            "Kubernetes",
+            "Volume",
+            "Persistent Volume",
+            "PVC",
+            "Storage Class",
+            "CSI"
+          ]
+        },
+        {
+          "n": 44,
+          "title": "Kubernetes HA & NFS Storage",
+          "detail": "Kubernetes High available setup. Storage with NFS server.",
+          "tags": [
+            "Kubernetes",
+            "High Availability",
+            "NFS"
+          ]
+        },
+        {
+          "n": 45,
+          "title": "K8s API Load Balancing & Ingress",
+          "detail": "Load balancer for Kubernetes API server with Keepalived and HAProxy. Kubernetes Ingress. Ingress nginx. Load balancer for self-hosted k8s: MetallB",
+          "tags": [
+            "Kubernetes",
+            "Keepalived",
+            "HAProxy",
+            "Ingress",
+            "ingress-nginx",
+            "MetalLB"
+          ]
+        },
+        {
+          "n": 46,
+          "title": "Ingress, ConfigMap, Secret, Cert-Manager",
+          "detail": "Ingress. ConfigMap. Secret. Cert-Manager.",
+          "tags": [
+            "Ingress",
+            "ConfigMap",
+            "Secret",
+            "Cert-Manager"
+          ]
+        },
+        {
+          "n": 47,
+          "title": "Cert-Manager HTTP01/DNS01 & External DNS",
+          "detail": "Ingress + Cert-manager (HTTP01 and DNS01 method). External DNS with DigitalOcean",
+          "tags": [
+            "Ingress",
+            "Cert-Manager",
+            "HTTP01",
+            "DNS01",
+            "External DNS",
+            "DigitalOcean"
+          ]
+        },
+        {
+          "n": 48,
+          "title": "GitOps with ArgoCD: Pull vs Push",
+          "detail": "App deployment to Kubernetes: pull vs push method. GitOps: ArgoCD. ArgoCD architecture.",
+          "tags": [
+            "Kubernetes",
+            "GitOps",
+            "ArgoCD"
+          ]
+        },
+        {
+          "n": 49,
+          "title": "K8s CI/CD: kubectl, ArgoCD, Probes",
+          "detail": "CI/CD for Kubernetes. Push method with kubectl and pull method with ArgoCD. Readiness and liveness probes.",
+          "tags": [
+            "Kubernetes",
+            "CI/CD",
+            "kubectl",
+            "ArgoCD",
+            "readiness probe",
+            "liveness probe"
+          ]
+        },
+        {
+          "n": 50,
+          "title": "Affinity, Anti-Affinity & Resource Limits",
+          "detail": "Kubernets: affinity, anti-affinity, node and pod affinity. CPU and Memory requests, limits.",
+          "tags": [
+            "Kubernetes",
+            "affinity",
+            "anti-affinity",
+            "CPU",
+            "Memory",
+            "requests",
+            "limits"
+          ]
+        },
+        {
+          "n": 51,
+          "title": "Pod Distribution Budget, Operators & CloudNativePG",
+          "detail": "Kubernetes. Pod Distribution Budget. Node cordon, drain. Stateful workloads: Operators. Demo with CloudNativePG operator. Intro to Volume Snapshots.",
+          "tags": [
+            "Kubernetes",
+            "Pod Distribution Budget",
+            "cordon",
+            "drain",
+            "Operators",
+            "CloudNativePG",
+            "Volume Snapshots"
+          ]
+        },
+        {
+          "n": 52,
+          "title": "Volume Snapshots, ArgoCD App of Apps, Taints",
+          "detail": "Kubernetes. Volume Snapshots. ArgoCD - App Of Apps Pattern. Taints and tolerations.",
+          "tags": [
+            "Kubernetes",
+            "Volume Snapshots",
+            "ArgoCD",
+            "App Of Apps",
+            "Taints",
+            "tolerations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Secrets, Security & Autoscaling",
+      "short": "Secrets & Scaling",
+      "range": "53–58",
+      "lessons": [
+        {
+          "n": 53,
+          "title": "HashiCorp Vault Setup & ACL Policies",
+          "detail": "Secret management: Hashicorp Vault. Installation, secret management, ACL policies, High Available setup.",
+          "tags": [
+            "Vault",
+            "secret management",
+            "ACL policies",
+            "High Availability"
+          ]
+        },
+        {
+          "n": 54,
+          "title": "Vault-K8s Integration, External Secrets, RBAC",
+          "detail": "Secret management. Vault to K8s integration. External Secrets Operator. Network policies. Role-based access control (RBAC).",
+          "tags": [
+            "Vault",
+            "Kubernetes",
+            "External Secrets Operator",
+            "Network Policies",
+            "RBAC"
+          ]
+        },
+        {
+          "n": 55,
+          "title": "K8s Autoscaling: HPA, Cluster Autoscaler, KEDA",
+          "detail": "Kubernetes autoscaling: Horizontal Pod Autoscaling (HPA), Cluster Autoscaler, Kubernetes-based Event Driven Autoscaler (KEDA). Writing own helm chart.",
+          "tags": [
+            "Kubernetes",
+            "HPA",
+            "Cluster Autoscaler",
+            "KEDA",
+            "Helm"
+          ]
+        },
+        {
+          "n": 56,
+          "title": "Migrating Helm Charts to ArgoCD",
+          "detail": "Migrating infra helm charts' setup to argocd. Debugging and fixing problems with hanging resources patching finalizers.",
+          "tags": [
+            "Helm",
+            "ArgoCD",
+            "finalizers",
+            "debugging"
+          ]
+        },
+        {
+          "n": 57,
+          "title": "Full K8s Infra on DigitalOcean with Vault & Celery",
+          "detail": "Full k8s infra from zero on DigitalOcean. Deploy django app with integration with Vault to K8s. Writing additional configs for celery.",
+          "tags": [
+            "Kubernetes",
+            "DigitalOcean",
+            "Django",
+            "Vault",
+            "Celery"
+          ]
+        },
+        {
+          "n": 58,
+          "title": "Celery Autoscaling with KEDA & Cost Optimization",
+          "detail": "Celery workers autoscaling with Redis and KEDA + Cluster Autoscaler. Celery configuration for one pod per task. Cost optimization.",
+          "tags": [
+            "Celery",
+            "Redis",
+            "KEDA",
+            "Cluster Autoscaler",
+            "cost optimization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Private Infrastructure",
+      "short": "Private Infra",
+      "range": "59–73",
+      "lessons": [
+        {
+          "n": 59,
+          "title": "Private Infra Intro & Harbor Registry via Ansible",
+          "detail": "Private infra introduction. Prepare initial setup ansible role. Installation of harbor registry with custom ansible role.",
+          "tags": [
+            "Ansible",
+            "Harbor",
+            "private infra"
+          ]
+        },
+        {
+          "n": 60,
+          "title": "Network Segmentation & RKE2/Rancher Intro",
+          "detail": "Private infra. Network divide methods theory (Firewall, VLAN, VXLAN based). K8s certified distributions. RKE2 introduction, setup, configuration. Rancher introduction.",
+          "tags": [
+            "VLAN",
+            "VXLAN",
+            "Firewall",
+            "RKE2",
+            "Rancher",
+            "Kubernetes"
+          ]
+        },
+        {
+          "n": 61,
+          "title": "Networking Fundamentals & pfSense Setup",
+          "detail": "Private Infra. Networking: How Hub, Switch, Router work. Layer 2 vs Layer 3 switch. PfSense setup from zero.",
+          "tags": [
+            "Hub",
+            "Switch",
+            "Router",
+            "Layer 2",
+            "Layer 3",
+            "pfSense"
+          ]
+        },
+        {
+          "n": 62,
+          "title": "pfSense: DHCP, DNS, NTP & Linux Bridge",
+          "detail": "Private Infra. PfSense configuration: DHCP server, Gateway, DNS server, NTP server. Broadcast domain. Linux bridge.",
+          "tags": [
+            "pfSense",
+            "DHCP",
+            "DNS",
+            "NTP",
+            "broadcast domain",
+            "Linux bridge"
+          ]
+        },
+        {
+          "n": 63,
+          "title": "Network Segmentation: pfSense & OpenNebula",
+          "detail": "Private Infra. Network segmentation with pfSense and OpenNebula. Physical (multiple LANs) and virtual (with VLANs) segmentation.",
+          "tags": [
+            "pfSense",
+            "OpenNebula",
+            "VLAN",
+            "network segmentation"
+          ]
+        },
+        {
+          "n": 64,
+          "title": "pfSense OpenVPN & Interface Troubleshooting",
+          "detail": "Pfsense OpenVPN setup. Break and fix pfSense interfaces. Full ready network to setup apps.",
+          "tags": [
+            "pfSense",
+            "OpenVPN",
+            "networking"
+          ]
+        },
+        {
+          "n": 65,
+          "title": "Rancher HA Install & Downstream Clusters",
+          "detail": "Rancher installation (high available) on 3 node RKE2 cluster. Rancher functionalities. Provisioning downstream clusters from Rancher.",
+          "tags": [
+            "Rancher",
+            "RKE2",
+            "High Availability",
+            "downstream clusters"
+          ]
+        },
+        {
+          "n": 66,
+          "title": "Rancher Downstream Clusters & OIDC Intro",
+          "detail": "Private Infra. Rancher provision downstream clusters. Oauth and OIDC introduction. Setup and configure infra cluster.",
+          "tags": [
+            "Rancher",
+            "OAuth",
+            "OIDC"
+          ]
+        },
+        {
+          "n": 67,
+          "title": "Keycloak on K8s & CPU Passthrough",
+          "detail": "Private infra. Keycloak setup on K8s using operator. Solving virtualization's CPU passthrough problems.",
+          "tags": [
+            "Keycloak",
+            "Kubernetes",
+            "Operator",
+            "CPU passthrough",
+            "virtualization"
+          ]
+        },
+        {
+          "n": 68,
+          "title": "Keycloak-ArgoCD Integration & OIDC Workflow",
+          "detail": "Private Infra. Keycloak setup and integration with ArgoCD. OIDC workflow explained.",
+          "tags": [
+            "Keycloak",
+            "ArgoCD",
+            "OIDC"
+          ]
+        },
+        {
+          "n": 69,
+          "title": "ArgoCD RBAC, HAProxy/Keepalived HA & Harbor Auth",
+          "detail": "Private infra. ArgoCD RBAC sync with Keycloak groups. High available load balancing with HAProxy and Keepalived. Setup harbor in K8s and integration with Keycloak for auth.",
+          "tags": [
+            "ArgoCD",
+            "RBAC",
+            "Keycloak",
+            "HAProxy",
+            "Keepalived",
+            "Harbor"
+          ]
+        },
+        {
+          "n": 70,
+          "title": "Harbor with Trivy & MinIO S3 Architecture",
+          "detail": "Private Infra. Harbor: registry, proxy cache, robot account, vulnerability scan with Trivy. MinIO S3: architecture, RAID 0,1,5,6, deploy in K8s, overview of UI console.",
+          "tags": [
+            "Harbor",
+            "Trivy",
+            "MinIO",
+            "S3",
+            "RAID"
+          ]
+        },
+        {
+          "n": 71,
+          "title": "Keycloak OIDC for MinIO/Rancher & Nexus Setup",
+          "detail": "Private Infra. Integrate Keycloak OIDC auth to MinIO and Rancher. Change Harbor image storage to S3 MinIO. Sonatype Nexus setup and configuration (unfortunately, the video recording ended abruptly at this point. However, installation instructions are below.).",
+          "tags": [
+            "Keycloak",
+            "OIDC",
+            "MinIO",
+            "Rancher",
+            "Harbor",
+            "Sonatype Nexus"
+          ],
+          "note": "Video recording ended abruptly at this point; installation instructions given as text only."
+        },
+        {
+          "n": 72,
+          "title": "Nexus Config, Etcd Backup & Postgres HA (Part 1)",
+          "detail": "Private Infra. Sonatype Nexus configuration info. Etcd backup to s3 MinIO for kubernetes cluster with Rancher. High available postgres with patroni, etcd, haproxy, keepalived theory and setup: part 1.",
+          "tags": [
+            "Sonatype Nexus",
+            "Etcd",
+            "MinIO",
+            "Rancher",
+            "Patroni",
+            "HAProxy",
+            "Keepalived"
+          ]
+        },
+        {
+          "n": 73,
+          "title": "Postgres HA: Switchover, Replicas & Backup (Part 2)",
+          "detail": "Private infra. Postgres HA setup: HAProxy configuration, switchover test. Async, sync, standby sync replicas. Info about postgres backup with Barman and pgBackRest. The end of the course.",
+          "tags": [
+            "PostgreSQL",
+            "HAProxy",
+            "replication",
+            "Barman",
+            "pgBackRest"
+          ]
+        }
+      ]
+    }
+  ]
+}

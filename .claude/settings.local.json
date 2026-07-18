@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bd --version)",
+      "Bash(bd --help)",
+      "Bash(bd ready *)",
+      "Bash(bd label *)",
+      "Bash(bd dep *)",
+      "Bash(bd create *)",
+      "Bash(bd list *)",
+      "Bash(bd statuses *)",
+      "Bash(bd types *)",
+      "Bash(bd set-state *)",
+      "Bash(bd show *)",
+      "Bash(bd comment *)"
+    ]
+  }
+}

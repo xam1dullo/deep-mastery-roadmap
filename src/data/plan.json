@@ -1,0 +1,1147 @@
+{
+  "meta": {
+    "title": "Deep Mastery Plan",
+    "subtitle": "v3 · Course Edition — Backend / Fullstack Systems Engineer",
+    "startDate": "2026-07-13",
+    "endDate": "2027-07-11",
+    "totalDays": 364,
+    "totalWeeks": 52,
+    "totalBuilds": 17,
+    "hoursPerDay": 4.5,
+    "checkpoint": { "week": 30, "date": "2027-02-07", "label": "interview-ready as a mid-level fullstack Go/Node engineer" },
+    "languages": ["C", "Go", "TypeScript / Node"]
+  },
+  "dailyRhythm": [
+    { "block": "Math", "time": "35m", "what": "First thing, fresh brain. Udemy math course of your current level (sequence below). Watch → pause → solve by hand → check. Applies every single day of all 364 — it is not repeated in the day blocks." },
+    { "block": "DSA", "time": "1.25h", "what": "NeetCode/LeetCode, unchanged. Timed problems, current pattern, always out loud on the last one." },
+    { "block": "Main Build", "time": "~2h", "what": "The module's mini-build project (CodeCrafters where applicable), unchanged from v2." },
+    { "block": "Course", "time": "30m", "what": "Replaces \"Reading.\" The module's Udemy course, sections mapped per day below. Watch at 1.25–1.5x, handwritten notes, re-draw one diagram from memory after each session." },
+    { "block": "Saturday", "time": "3–4h", "what": "Big build block (push the mini-project forward hard) + weekly review + 35m math review of the week." },
+    { "block": "Sunday", "time": "Lighter", "what": "Finish course sections, plan next week, re-solve failed DSA, math spaced-review set (redo 5 problems from two weeks ago)." }
+  ],
+  "weeklyNonNegotiables": [
+    "Math: 35 min daily in the Udemy sequence + Sunday spaced-review set. Never traded away for build time.",
+    "One DSA problem per day solved out loud (NeetCode/LeetCode, unchanged).",
+    "No passive watching: every course session ends with notes, a redrawn diagram, or code — otherwise it counts as zero.",
+    "Every build ends with a README you could defend in an interview.",
+    "Saturday = biggest build push. Sunday = lighter: review, plan, backfill.",
+    "From Week 30 (Day 210) onward: at least one mock or real interview per week."
+  ],
+  "mathTrack": [
+    { "order": 1, "title": "Master the Fundamentals of Math", "author": "Krista King", "note": "arithmetic + pre-algebra gaps" },
+    { "order": 2, "title": "Become an Algebra Master", "author": "Krista King", "note": "covers Algebra 1 & 2 material" },
+    { "order": 3, "title": "Become a Geometry Master", "author": "Krista King" },
+    { "order": 4, "title": "Become a Trigonometry & Precalculus Master", "author": "Krista King" },
+    { "order": 5, "title": "Become a Calculus 1 Master", "author": "Krista King" },
+    { "order": 6, "title": "Discrete Mathematics", "author": "Miran Fattah", "note": "sets, logic, proofs, combinatorics, graphs" },
+    { "order": 7, "title": "Become a Linear Algebra Master", "author": "Krista King" },
+    { "order": 8, "title": "Become a Probability & Statistics Master", "author": "Krista King" }
+  ],
+  "builds": [
+    { "id": 1, "title": "Custom memory allocator (mini malloc)", "tech": "C" },
+    { "id": 2, "title": "A shell — fork/exec/pipes/redirection", "tech": "C" },
+    { "id": 3, "title": "TCP + HTTP server from raw sockets", "tech": "C → Go" },
+    { "id": 4, "title": "DNS server", "tech": "Go" },
+    { "id": 5, "title": "Concurrent web crawler — worker pool, rate limiting, pprof", "tech": "Go" },
+    { "id": 6, "title": "Production-style REST API — Postgres (pgx) + migrations + JWT + tests + Docker + CI", "tech": "Go" },
+    { "id": 7, "title": "Mini event loop — micro/macrotasks, nextTick/setImmediate", "tech": "JS" },
+    { "id": 8, "title": "Fullstack service — TS + Fastify/NestJS BFF + thin React frontend, over build #6", "tech": "TS/Node" },
+    { "id": 9, "title": "SQLite clone — reads a real DB file, B-tree, SQL parsing", "tech": "Go" },
+    { "id": 10, "title": "Database from scratch — disk B-tree + KV + WAL + transactions", "tech": "Go" },
+    { "id": 11, "title": "Redis clone — RESP, event loop, persistence, replication", "tech": "Go" },
+    { "id": 12, "title": "Kafka clone — wire protocol, partitions, offsets", "tech": "Go" },
+    { "id": 13, "title": "Mini message broker — segmented log + consumer groups (extends #12)", "tech": "Go" },
+    { "id": 14, "title": "Mini AMQP-style pub/sub broker — exchanges/bindings/queues", "tech": "Go" },
+    { "id": 15, "title": "Mini reverse proxy / load balancer", "tech": "Go" },
+    { "id": 16, "title": "Mini container runtime — namespaces + cgroups + chroot", "tech": "Go" },
+    { "id": 17, "title": "Capstone — a distributed system that uses all of the above", "tech": "—" }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "title": "Setup & Baseline",
+      "weeksLabel": "Week 1",
+      "weekStart": 1,
+      "weekEnd": 1,
+      "summary": "Clean dev environment + honest starting point in DSA and math. Save every course from the shopping list into your Udemy library this week.",
+      "courses": [
+        { "title": "Linux Mastery: Master the Linux Command Line", "author": "Ziyad Yehia", "note": "skim what you already know" },
+        { "title": "Master the Fundamentals of Math", "author": "Krista King", "note": "math placement" }
+      ],
+      "segments": [
+        {
+          "dayStart": 1, "dayEnd": 1, "dateStart": "2026-07-13", "dateEnd": "2026-07-13", "kind": "single", "label": "Monday",
+          "blocks": [
+            { "type": "DSA", "text": "1st random NeetCode baseline problem, timed, record results." },
+            { "type": "BUILD", "text": "Set up Linux dev box (WSL2/native), dotfiles, tmux, shell environment." },
+            { "type": "MATH", "text": "Placement: Krista King Fundamentals of Math — blitz the section quizzes to find where you stop scoring ~80%. (Optionally: one free Khan Academy course challenge as a 30-min diagnostic.)" },
+            { "type": "COURSE", "text": "Linux Mastery — shell + environment sections while you set up the box." }
+          ]
+        },
+        {
+          "dayStart": 2, "dayEnd": 2, "dateStart": "2026-07-14", "dateEnd": "2026-07-14", "kind": "single", "label": "Tuesday",
+          "blocks": [
+            { "type": "DSA", "text": "2nd baseline problem, timed." },
+            { "type": "BUILD", "text": "Configure debuggers — gdb and delve working cleanly on sample programs." },
+            { "type": "MATH", "text": "Finish placement → lock your starting course & section." },
+            { "type": "COURSE", "text": "Linux Mastery — processes, permissions, piping sections." }
+          ]
+        },
+        {
+          "dayStart": 3, "dayEnd": 3, "dateStart": "2026-07-15", "dateEnd": "2026-07-15", "kind": "single", "label": "Wednesday",
+          "blocks": [
+            { "type": "DSA", "text": "3rd baseline problem, timed." },
+            { "type": "BUILD", "text": "Advanced Git fluency: interactive rebase, bisect, reflog." },
+            { "type": "MATH", "text": "Daily 35m begins at your placed section. From here it runs silently every day." },
+            { "type": "COURSE", "text": "Finish the Linux Mastery skim." }
+          ]
+        },
+        {
+          "dayStart": 4, "dayEnd": 4, "dateStart": "2026-07-16", "dateEnd": "2026-07-16", "kind": "single", "label": "Thursday",
+          "blocks": [
+            { "type": "DSA", "text": "4th baseline problem, timed." },
+            { "type": "BUILD", "text": "Create master GitHub repos for all future mini-builds. Define clean templates." },
+            { "type": "COURSE", "text": "Open Udemy Business → search the full shopping list (last page) → save every course; note any missing from the catalog and pick replacements now." }
+          ]
+        },
+        {
+          "dayStart": 5, "dayEnd": 5, "dateStart": "2026-07-17", "dateEnd": "2026-07-17", "kind": "single", "label": "Friday",
+          "blocks": [
+            { "type": "DSA", "text": "5th baseline problem, timed. Complete your baseline stats." },
+            { "type": "BUILD", "text": "Create a CodeCrafters account. Skim all challenges, check C/Go language support." },
+            { "type": "COURSE", "text": "Preview Module 1 courses: intros of Advanced C Programming and Operating Systems from Scratch." }
+          ]
+        },
+        {
+          "dayStart": 6, "dayEnd": 6, "dateStart": "2026-07-18", "dateEnd": "2026-07-18", "kind": "single", "label": "Saturday",
+          "blocks": [
+            { "type": "BUILD", "text": "Write your strict \"code rules\" checklist (naming, function layout, error-handling policy) enforced on every build project." },
+            { "type": "REVIEW", "text": "First weekly review. Verify all setup boxes ticked. Math week-review (35m)." }
+          ]
+        },
+        {
+          "dayStart": 7, "dayEnd": 7, "dateStart": "2026-07-19", "dateEnd": "2026-07-19", "kind": "single", "label": "Sunday",
+          "blocks": [
+            { "type": "REVIEW", "text": "Plan Module 1 in detail. Re-solve any failed baseline DSA. Math spaced set." },
+            { "type": "COURSE", "text": "Any unfinished Linux sections; confirm all Module-1 courses are saved." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "C & OS Internals",
+      "weeksLabel": "Weeks 2–6",
+      "weekStart": 2,
+      "weekEnd": 6,
+      "summary": "You cannot build a mini-Redis or mini-Docker without memory, processes, and syscalls.",
+      "coreBuilds": "Custom memory allocator (C) · custom shell — fork/exec/pipes (CodeCrafters, C) · stretch: fixed-size thread pool",
+      "dsaTarget": "Arrays & Hashing → Two Pointers → Sliding Window → Stack",
+      "courses": [
+        { "title": "Advanced C Programming Course", "author": "Tim Buchalka & Jason Fedin" },
+        { "title": "Operating Systems from Scratch, Part 1–2", "author": "Vignesh Sekar" },
+        { "title": "Linux Inter Process Communication (IPC) from Scratch in C", "author": "Abhishek Sagar" },
+        { "title": "Multithreading & Thread Synchronization in C/C++", "author": "Abhishek Sagar" }
+      ],
+      "segments": [
+        {
+          "dayStart": 8, "dayEnd": 12, "dateStart": "2026-07-20", "dateEnd": "2026-07-24", "kind": "weekday", "label": "Memory & Custom Allocator",
+          "blocks": [
+            { "type": "DSA", "text": "Arrays & Hashing on NeetCode. Talk out loud on the final problem daily." },
+            { "type": "BUILD", "text": "Experimental C programs with pointer arithmetic. Map process memory segments via /proc/[pid]/maps. Plan the allocator's free-list architecture." },
+            { "type": "COURSE", "text": "Advanced C — pointers, pointer arithmetic, dynamic memory & memory-layout sections." }
+          ]
+        },
+        {
+          "dayStart": 13, "dayEnd": 14, "dateStart": "2026-07-25", "dateEnd": "2026-07-26", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Foundation of the Custom Memory Allocator: malloc() via sbrk() + first-fit explicit free list." },
+            { "type": "REVIEW", "day": "Sun", "text": "OS from Scratch paging sections. Design free() with coalescing." }
+          ]
+        },
+        {
+          "dayStart": 15, "dayEnd": 19, "dateStart": "2026-07-27", "dateEnd": "2026-07-31", "kind": "weekday", "label": "Memory & Custom Allocator",
+          "blocks": [
+            { "type": "DSA", "text": "Two Pointers, medium tracks." },
+            { "type": "BUILD", "text": "Implement free() + boundary tags for coalescing. Debug core dumps with gdb." },
+            { "type": "COURSE", "text": "OS from Scratch — memory management, paging, page faults, TLB sections; Advanced C debugging sections." }
+          ]
+        },
+        {
+          "dayStart": 20, "dayEnd": 21, "dateStart": "2026-08-01", "dateEnd": "2026-08-02", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Complete the allocator. README explaining the free list + interview answers. Push to GitHub." },
+            { "type": "REVIEW", "day": "Sun", "text": "Memory-virtualization recap from course notes. Prep process-creation exploration." }
+          ]
+        },
+        {
+          "dayStart": 22, "dayEnd": 26, "dateStart": "2026-08-03", "dateEnd": "2026-08-07", "kind": "weekday", "label": "Processes, Threads, Concurrency & Shell",
+          "blocks": [
+            { "type": "DSA", "text": "Sliding Window — dynamic windows, string challenges." },
+            { "type": "BUILD", "text": "Start CodeCrafters Shell in C: REPL engine, command parsing, internal builtins." },
+            { "type": "COURSE", "text": "OS from Scratch — processes, direct execution, scheduling sections." }
+          ]
+        },
+        {
+          "dayStart": 27, "dayEnd": 28, "dateStart": "2026-08-08", "dateEnd": "2026-08-09", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "External command execution: fork(), execvp(), waitpid()." },
+            { "type": "REVIEW", "day": "Sun", "text": "Plan redirection + piping architecture. IPC course — file abstraction & pipe sections." }
+          ]
+        },
+        {
+          "dayStart": 29, "dayEnd": 33, "dateStart": "2026-08-10", "dateEnd": "2026-08-14", "kind": "weekday", "label": "Processes, Threads, Concurrency & Shell",
+          "blocks": [
+            { "type": "DSA", "text": "Stack patterns (Valid Parentheses, monotonic stack)." },
+            { "type": "BUILD", "text": "Redirection (>, <) via dup2(); multi-command pipelines (|) via pipe()." },
+            { "type": "COURSE", "text": "IPC course — pipes/FIFOs sections; Multithreading course — threads intro." }
+          ]
+        },
+        {
+          "dayStart": 34, "dayEnd": 35, "dateStart": "2026-08-15", "dateEnd": "2026-08-16", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Finalize the Shell on CodeCrafters: quoting edge cases, multi-pipe streams, architectural README. Then multi-threaded C experiments: create races, fix them with pthread_mutex_t." },
+            { "type": "REVIEW", "day": "Sun", "text": "Concurrency course catch-up. Plan the thread pool." }
+          ]
+        },
+        {
+          "dayStart": 36, "dayEnd": 40, "dateStart": "2026-08-17", "dateEnd": "2026-08-21", "kind": "weekday", "label": "I/O Models & Thread Pool",
+          "blocks": [
+            { "type": "DSA", "text": "Mixed review across all Module 1 patterns." },
+            { "type": "BUILD", "text": "Fixed-size thread pool in C: synchronized task queue + mutex + condition variable." },
+            { "type": "COURSE", "text": "Multithreading course — locks, condition variables, thread-pool pattern sections. (epoll/alternative I/O: preview only — Hussein Nasser closes it properly in Module 2.)" }
+          ]
+        },
+        {
+          "dayStart": 41, "dayEnd": 42, "dateStart": "2026-08-22", "dateEnd": "2026-08-23", "kind": "weekend", "label": "Module Wrap",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Stress-test the thread pool. Document threading + memory lessons from Module 1." },
+            { "type": "REVIEW", "day": "Sun", "text": "Clean up repos. Plan the Module 2 networking sandbox." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Networking + HTTP From Scratch",
+      "weeksLabel": "Weeks 7–10",
+      "weekStart": 7,
+      "weekEnd": 10,
+      "summary": "OSI/TCP-IP, CIDR, 3-way handshake, congestion control, sockets API, HTTP/1.1→3, TLS, L4 vs L7.",
+      "coreBuilds": "TCP echo server + client (C & Go) · HTTP server (CodeCrafters) · DNS server (CodeCrafters, Go)",
+      "dsaTarget": "Binary Search → Linked List",
+      "courses": [
+        { "title": "Fundamentals of Network Engineering", "author": "Hussein Nasser", "note": "backbone of the module" },
+        { "title": "Fundamentals of Backend Engineering", "author": "Hussein Nasser", "note": "companion" },
+        { "title": "CCNA subnetting sections", "author": "David Bombal", "optional": true },
+        { "title": "Getting Started with Wireshark", "author": "Chris Greer", "optional": true }
+      ],
+      "segments": [
+        {
+          "dayStart": 43, "dayEnd": 47, "dateStart": "2026-08-24", "dateEnd": "2026-08-28", "kind": "weekday", "label": "Sockets, TCP/IP & HTTP",
+          "blocks": [
+            { "type": "DSA", "text": "Binary Search (classic, variations, matrix searches)." },
+            { "type": "BUILD", "text": "Raw TCP echo server + client in C: socket(), bind(), listen(), accept()." },
+            { "type": "COURSE", "text": "Nasser, Network Eng — OSI vs TCP/IP, IP, UDP, TCP internals sections. (CIDR shaky? Bombal subnetting sections.)" }
+          ]
+        },
+        {
+          "dayStart": 48, "dayEnd": 49, "dateStart": "2026-08-29", "dateEnd": "2026-08-30", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Rewrite the echo system in Go; compare Go's abstractions with C's raw descriptors. Capture your own handshake in Wireshark." },
+            { "type": "REVIEW", "day": "Sun", "text": "TCP state transitions, flow-control windows, TIME_WAIT — Nasser's TCP deep-dive sections." }
+          ]
+        },
+        {
+          "dayStart": 50, "dayEnd": 54, "dateStart": "2026-08-31", "dateEnd": "2026-09-04", "kind": "weekday", "label": "Sockets, TCP/IP & HTTP",
+          "blocks": [
+            { "type": "DSA", "text": "Linked List (reversals, cycle detection, merges)." },
+            { "type": "BUILD", "text": "Start CodeCrafters HTTP server: manual header/request parsing from raw byte streams, no libraries." },
+            { "type": "COURSE", "text": "Nasser — HTTP/1.1 limits, keep-alive, head-of-line blocking sections." }
+          ]
+        },
+        {
+          "dayStart": 55, "dayEnd": 56, "dateStart": "2026-09-05", "dateEnd": "2026-09-06", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Concurrent connection handling, routing, text + binary file streaming." },
+            { "type": "REVIEW", "day": "Sun", "text": "Nasser — HTTP/2 streams, frames, HPACK; the path to HTTP/3/QUIC." }
+          ]
+        },
+        {
+          "dayStart": 57, "dayEnd": 61, "dateStart": "2026-09-07", "dateEnd": "2026-09-11", "kind": "weekday", "label": "DNS & Byte-Level Packets",
+          "blocks": [
+            { "type": "DSA", "text": "Advanced linked list (merge K lists, LRU-style problems)." },
+            { "type": "BUILD", "text": "Start CodeCrafters DNS server in Go: read raw network byte headers, map binary representations." },
+            { "type": "COURSE", "text": "DNS sections in Nasser + record types (A, AAAA, CNAME, MX). DNS is thin on Udemy — the CodeCrafters challenge itself is the course here." }
+          ]
+        },
+        {
+          "dayStart": 62, "dayEnd": 63, "dateStart": "2026-09-12", "dateEnd": "2026-09-13", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Manual DNS response construction — question/answer record byte arrays via bit shifting." },
+            { "type": "REVIEW", "day": "Sun", "text": "Resolution chains, caching, TTL. Plan the stretch goal." }
+          ]
+        },
+        {
+          "dayStart": 64, "dayEnd": 68, "dateStart": "2026-09-14", "dateEnd": "2026-09-18", "kind": "weekday", "label": "DNS & Byte-Level Packets",
+          "blocks": [
+            { "type": "DSA", "text": "Mixed timed binary search + linked list sets." },
+            { "type": "BUILD", "text": "Recursive DNS forwarding + full test coverage." },
+            { "type": "COURSE", "text": "Nasser — TLS handshakes, CA hierarchies, cert validation chains." }
+          ]
+        },
+        {
+          "dayStart": 69, "dayEnd": 70, "dateStart": "2026-09-19", "dateEnd": "2026-09-20", "kind": "weekend", "label": "Module Wrap",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Complete the DNS server. Document L4 vs L7 in the README." },
+            { "type": "REVIEW", "day": "Sun", "text": "Install Go profiling toolsets (pprof, trace). Plan the Go deep-dive." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Go Deep: Runtime + Production Backend",
+      "weeksLabel": "Weeks 11–15",
+      "weekStart": 11,
+      "weekEnd": 15,
+      "summary": "Two halves: runtime internals, then a production-grade API — clones prove depth, this proves you can ship. L3 interviews test both.",
+      "coreBuilds": "Concurrent web crawler (#5) · production REST API — Go + Postgres (pgx) + migrations + JWT + tests + Docker + CI (#6)",
+      "dsaTarget": "Trees intro (traversals) → BST",
+      "courses": [
+        { "title": "Working with Concurrency in Go (Golang)", "author": "Trevor Sawler" },
+        { "title": "Backend Master Class [Golang + PostgreSQL + Kubernetes + gRPC]", "author": "TECH SCHOOL", "note": "follow alongside your own API" },
+        { "title": "Runtime internals — Go blog GC/scheduler posts + GopherCon talks", "note": "no Udemy course exists (free, video)" }
+      ],
+      "segments": [
+        {
+          "dayStart": 71, "dayEnd": 75, "dateStart": "2026-09-21", "dateEnd": "2026-09-25", "kind": "weekday", "label": "Runtime Internals + Crawler",
+          "blocks": [
+            { "type": "DSA", "text": "Tree fundamentals: recursive properties, in/pre/post-order traversals." },
+            { "type": "BUILD", "text": "Web crawler core: extraction workers, safe link-storage maps, channels + select." },
+            { "type": "COURSE", "text": "Sawler — goroutines, channels, select, race conditions. GopherCon: \"The Scheduler Saga\" (GMP)." }
+          ]
+        },
+        {
+          "dayStart": 76, "dayEnd": 77, "dateStart": "2026-09-26", "dateEnd": "2026-09-27", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Context cancellation, bounded worker pool, rate limiting." },
+            { "type": "REVIEW", "day": "Sun", "text": "Go memory model; run escape analysis (go build -gcflags=\"-m\"), map stack vs heap. GopherCon: \"Understanding Allocations\"." }
+          ]
+        },
+        {
+          "dayStart": 78, "dayEnd": 82, "dateStart": "2026-09-28", "dateEnd": "2026-10-02", "kind": "weekday", "label": "Runtime Internals + Crawler",
+          "blocks": [
+            { "type": "DSA", "text": "Level-order traversal via queues; BST intro (lookups, insertions)." },
+            { "type": "BUILD", "text": "Benchmarks + pprof heap/CPU profiling of the crawler." },
+            { "type": "COURSE", "text": "Go blog — tri-color mark-sweep GC posts; Sawler worker-pool sections." }
+          ]
+        },
+        {
+          "dayStart": 83, "dayEnd": 84, "dateStart": "2026-10-03", "dateEnd": "2026-10-04", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Finalize crawler; record a full memory-trace performance profile in the README." },
+            { "type": "REVIEW", "day": "Sun", "text": "Pick the API domain (bookings / tasks / wallet). Sketch schema + endpoints." }
+          ]
+        },
+        {
+          "dayStart": 85, "dayEnd": 89, "dateStart": "2026-10-05", "dateEnd": "2026-10-09", "kind": "weekday", "label": "Production REST API",
+          "blocks": [
+            { "type": "DSA", "text": "BST mutations, validation, kth-smallest." },
+            { "type": "BUILD", "text": "Scaffold the REST API: chi (or stdlib) routing, config, structured logging (slog), health endpoints." },
+            { "type": "COURSE", "text": "Backend Master Class — project structure, handlers, middleware sections." }
+          ]
+        },
+        {
+          "dayStart": 90, "dayEnd": 91, "dateStart": "2026-10-10", "dateEnd": "2026-10-11", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Postgres via pgx + migrations (golang-migrate). Schema with proper indexes." },
+            { "type": "REVIEW", "day": "Sun", "text": "BMC — DB/migration sections; index warm-up on use-the-index-luke.com (deep dive comes in Module 5)." }
+          ]
+        },
+        {
+          "dayStart": 92, "dayEnd": 96, "dateStart": "2026-10-12", "dateEnd": "2026-10-16", "kind": "weekday", "label": "Production REST API",
+          "blocks": [
+            { "type": "DSA", "text": "Tree recursion patterns (LCA, diameter)." },
+            { "type": "BUILD", "text": "CRUD handlers, request validation, clean error handling, pagination." },
+            { "type": "COURSE", "text": "BMC — CRUD, validation, error-handling sections." }
+          ]
+        },
+        {
+          "dayStart": 97, "dayEnd": 98, "dateStart": "2026-10-17", "dateEnd": "2026-10-18", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "JWT auth + middleware chain (auth, rate limit, request ID, recovery)." },
+            { "type": "REVIEW", "day": "Sun", "text": "BMC — auth (JWT/PASETO) sections; graceful shutdown, context timeouts throughout the stack." }
+          ]
+        },
+        {
+          "dayStart": 99, "dayEnd": 103, "dateStart": "2026-10-19", "dateEnd": "2026-10-23", "kind": "weekday", "label": "Production REST API",
+          "blocks": [
+            { "type": "DSA", "text": "Mixed timed tree sets." },
+            { "type": "BUILD", "text": "Table-driven unit tests + integration tests with testcontainers." },
+            { "type": "COURSE", "text": "BMC — testing + CI sections." }
+          ]
+        },
+        {
+          "dayStart": 104, "dayEnd": 105, "dateStart": "2026-10-24", "dateEnd": "2026-10-25", "kind": "weekend", "label": "Module Wrap",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Dockerfile, GitHub Actions CI, README with architecture diagram. This repo is your \"I can ship\" proof." },
+            { "type": "REVIEW", "day": "Sun", "text": "Whiteboard the GMP scheduler and GC from memory. Plan the Node module." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Node.js / TypeScript Deep + Fullstack Layer",
+      "weeksLabel": "Weeks 16–19",
+      "weekStart": 16,
+      "weekEnd": 19,
+      "summary": "V8 pipeline, event-loop phases, micro vs macrotasks, libuv, streams/buffers, strict TypeScript.",
+      "coreBuilds": "Mini event loop in JS (#7) · TS Fastify/NestJS BFF + thin React frontend over the Go API (#8)",
+      "dsaTarget": "Trees deep (DFS/BFS paths, serialize/deserialize)",
+      "courses": [
+        { "title": "JavaScript: Understanding the Weird Parts", "author": "Anthony Alicea" },
+        { "title": "Understanding Node.js: Core Concepts", "note": "event loop, libuv, streams" },
+        { "title": "Understanding TypeScript", "author": "Maximilian Schwarzmüller" },
+        { "title": "NestJS: The Complete Developer's Guide", "author": "Stephen Grider" },
+        { "title": "React — The Complete Guide", "author": "Maximilian", "note": "essentials sections ONLY" }
+      ],
+      "segments": [
+        {
+          "dayStart": 106, "dayEnd": 110, "dateStart": "2026-10-26", "dateEnd": "2026-10-30", "kind": "weekday", "label": "Event Loop From Scratch",
+          "blocks": [
+            { "type": "DSA", "text": "Tree DFS pathing, path sums." },
+            { "type": "BUILD", "text": "Mini event loop in JS: distinct microtask + macrotask queues mirroring real execution order." },
+            { "type": "COURSE", "text": "Weird Parts — execution contexts, closures, async; Node Core Concepts — event-loop phases, nextTick/setImmediate." }
+          ]
+        },
+        {
+          "dayStart": 111, "dayEnd": 112, "dateStart": "2026-10-31", "dateEnd": "2026-11-01", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Extend to nested setImmediate / process.nextTick sequencing; verify against real Node output." },
+            { "type": "REVIEW", "day": "Sun", "text": "V8 pipeline: Ignition bytecode, TurboFan JIT (Node Core Concepts V8 sections)." }
+          ]
+        },
+        {
+          "dayStart": 113, "dayEnd": 117, "dateStart": "2026-11-02", "dateEnd": "2026-11-06", "kind": "weekday", "label": "TS Backend (BFF)",
+          "blocks": [
+            { "type": "DSA", "text": "Tree BFS patterns, explicit state tracking across depths." },
+            { "type": "BUILD", "text": "Scaffold the TS service (NestJS — fits your depth and the local/EPAM market): strict tsconfig, schema validation, error boundaries." },
+            { "type": "COURSE", "text": "Understanding TypeScript — narrowing, generics; NestJS Guide — setup, modules, validation sections." }
+          ]
+        },
+        {
+          "dayStart": 118, "dayEnd": 119, "dateStart": "2026-11-07", "dateEnd": "2026-11-08", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Auth flow + typed API client for your Go API from Module 3 (this service is its BFF)." },
+            { "type": "REVIEW", "day": "Sun", "text": "Node Core Concepts — libuv thread pool: what's truly async vs pooled." }
+          ]
+        },
+        {
+          "dayStart": 120, "dayEnd": 124, "dateStart": "2026-11-09", "dateEnd": "2026-11-13", "kind": "weekday", "label": "TS Backend (BFF)",
+          "blocks": [
+            { "type": "DSA", "text": "Serialize/deserialize trees, advanced recursion." },
+            { "type": "BUILD", "text": "BFF endpoints aggregating the Go API; stream handlers; fast serialization hooks." },
+            { "type": "COURSE", "text": "Node Core Concepts — streams & buffers sections; NestJS Guide — interceptors/guards refresh." }
+          ]
+        },
+        {
+          "dayStart": 125, "dayEnd": 126, "dateStart": "2026-11-14", "dateEnd": "2026-11-15", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Vitest test suite; contract tests against the Go API." },
+            { "type": "REVIEW", "day": "Sun", "text": "Understanding TypeScript — structural typing rules; compile pipeline." }
+          ]
+        },
+        {
+          "dayStart": 127, "dayEnd": 131, "dateStart": "2026-11-16", "dateEnd": "2026-11-20", "kind": "weekday", "label": "Thin Frontend + Integration",
+          "blocks": [
+            { "type": "DSA", "text": "Mixed timed tree sets (interview pacing)." },
+            { "type": "BUILD", "text": "Minimal React (Vite) frontend on the BFF: one list view, one form, one auth flow. Just enough to say \"fullstack\" honestly." },
+            { "type": "COURSE", "text": "React — The Complete Guide — essentials only: state, effects, data fetching. Do not let a 60-hour course eat the module." }
+          ]
+        },
+        {
+          "dayStart": 132, "dayEnd": 133, "dateStart": "2026-11-21", "dateEnd": "2026-11-22", "kind": "weekend", "label": "Module Wrap",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "docker-compose for the full stack (React → BFF → Go API → Postgres). One-command demo." },
+            { "type": "REVIEW", "day": "Sun", "text": "Polish both repos. Plan the database module." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Databases: SQL + Postgres Internals + Build a DB",
+      "weeksLabel": "Weeks 20–25",
+      "weekStart": 20,
+      "weekEnd": 25,
+      "summary": "CTEs/window functions, B-tree indexes, MVCC, WAL, VACUUM, query planner, EXPLAIN ANALYZE. L3 interviews will test SQL — drill 20m of real SQL daily inside the build block, against your Module-3 Postgres.",
+      "coreBuilds": "SQLite clone (CodeCrafters, #9) · disk-backed B-tree KV database + WAL (#10)",
+      "dsaTarget": "Heaps/Priority Queues → Intervals",
+      "courses": [
+        { "title": "Fundamentals of Database Engineering", "author": "Hussein Nasser", "note": "the DDIA/Petrov substitute" },
+        { "title": "SQL and PostgreSQL: The Complete Developer's Guide", "author": "Stephen Grider", "note": "daily SQL drill source" },
+        { "title": "use-the-index-luke.com", "note": "stays — free, short, unmatched for index reasoning" }
+      ],
+      "segments": [
+        {
+          "dayStart": 134, "dayEnd": 138, "dateStart": "2026-11-23", "dateEnd": "2026-11-27", "kind": "weekday", "label": "SQL Deep + SQLite Clone",
+          "blocks": [
+            { "type": "DSA", "text": "Heap foundations: build heaps, extractions." },
+            { "type": "BUILD", "text": "Start CodeCrafters SQLite clone in Go: map the file header + structure of a real .db file. SQL drill: Grider aggregation exercises." },
+            { "type": "COURSE", "text": "Nasser DB Eng — B-tree & indexing sections; Grider — aggregations, CTEs, window functions." }
+          ]
+        },
+        {
+          "dayStart": 139, "dayEnd": 140, "dateStart": "2026-11-28", "dateEnd": "2026-11-29", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Traverse database page schemas down to root B-tree leaves." },
+            { "type": "REVIEW", "day": "Sun", "text": "Index structures on use-the-index-luke.com." }
+          ]
+        },
+        {
+          "dayStart": 141, "dayEnd": 145, "dateStart": "2026-11-30", "dateEnd": "2026-12-04", "kind": "weekday", "label": "SQL Deep + SQLite Clone",
+          "blocks": [
+            { "type": "DSA", "text": "K-way merge, top-K frequent." },
+            { "type": "BUILD", "text": "Basic SQL parser: recognize SELECT parameters, map columns. Daily SQL drill continues." },
+            { "type": "COURSE", "text": "Nasser — log-structured (LSM) vs page-oriented (B-tree) storage sections." }
+          ]
+        },
+        {
+          "dayStart": 146, "dayEnd": 147, "dateStart": "2026-12-05", "dateEnd": "2026-12-06", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Link the parser to B-tree leaf reads — return real results for key queries." },
+            { "type": "REVIEW", "day": "Sun", "text": "Page layout constraints, cell pointer arrays (Nasser page-layout sections)." }
+          ]
+        },
+        {
+          "dayStart": 148, "dayEnd": 152, "dateStart": "2026-12-07", "dateEnd": "2026-12-11", "kind": "weekday", "label": "SQL Deep + SQLite Clone",
+          "blocks": [
+            { "type": "DSA", "text": "Mixed heaps → Intervals intro (Merge/Insert Intervals)." },
+            { "type": "BUILD", "text": "Edge cases + table-scan paths for non-indexed queries." },
+            { "type": "COURSE", "text": "Nasser — database internals & row/page storage sections." }
+          ]
+        },
+        {
+          "dayStart": 153, "dayEnd": 154, "dateStart": "2026-12-12", "dateEnd": "2026-12-13", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Finalize the SQLite clone; interactive testing loop on CodeCrafters." },
+            { "type": "REVIEW", "day": "Sun", "text": "Transaction theory basics (Nasser ACID sections) before building a write engine." }
+          ]
+        },
+        {
+          "dayStart": 155, "dayEnd": 159, "dateStart": "2026-12-14", "dateEnd": "2026-12-18", "kind": "weekday", "label": "Storage Engine From Scratch — holiday weeks; hours may dip, protect the daily streak",
+          "blocks": [
+            { "type": "DSA", "text": "Interval scheduling and minimization." },
+            { "type": "BUILD", "text": "Start the build-your-own.org database in Go: binary file format, raw disk paging." },
+            { "type": "COURSE", "text": "Nasser — transactions & recovery sections." }
+          ]
+        },
+        {
+          "dayStart": 160, "dayEnd": 161, "dateStart": "2026-12-19", "dateEnd": "2026-12-20", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Disk-persisted B-tree node splitting + merging." },
+            { "type": "REVIEW", "day": "Sun", "text": "Postgres storage: heap files, TOAST, page allocation (Nasser Postgres sections)." }
+          ]
+        },
+        {
+          "dayStart": 162, "dayEnd": 166, "dateStart": "2026-12-21", "dateEnd": "2026-12-25", "kind": "weekday", "label": "Storage Engine From Scratch — holiday weeks; hours may dip, protect the daily streak",
+          "blocks": [
+            { "type": "DSA", "text": "Mixed heap + interval sets under tight timing." },
+            { "type": "BUILD", "text": "KV lookup, insertion, continuous updates on the disk-backed engine." },
+            { "type": "COURSE", "text": "Nasser — MVCC, VACUUM, WAL sections." }
+          ]
+        },
+        {
+          "dayStart": 167, "dayEnd": 168, "dateStart": "2026-12-26", "dateEnd": "2026-12-27", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Light Write-Ahead Log for crash-recovery consistency." },
+            { "type": "REVIEW", "day": "Sun", "text": "EXPLAIN ANALYZE paths, hash joins, index scans (Nasser query-planner sections)." }
+          ]
+        },
+        {
+          "dayStart": 169, "dayEnd": 173, "dateStart": "2026-12-28", "dateEnd": "2027-01-01", "kind": "weekday", "label": "Storage Engine From Scratch — holiday weeks; hours may dip, protect the daily streak",
+          "blocks": [
+            { "type": "DSA", "text": "Advanced multi-interval / scheduling problems." },
+            { "type": "BUILD", "text": "Simple MVCC hooks; complete the database." },
+            { "type": "COURSE", "text": "Re-watch key Nasser storage sections at 2x for reinforcement." }
+          ]
+        },
+        {
+          "dayStart": 174, "dayEnd": 175, "dateStart": "2027-01-02", "dateEnd": "2027-01-03", "kind": "weekend", "label": "Module Wrap",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Full performance profile; document tradeoffs in the README." },
+            { "type": "REVIEW", "day": "Sun", "text": "Plan Redis: RESP protocol requirements." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Redis Internals + Build a Redis",
+      "weeksLabel": "Weeks 26–29",
+      "weekStart": 26,
+      "weekEnd": 29,
+      "summary": "RESP, single-threaded I/O-multiplexing event loop, skiplists, RDB/AOF, fork copy-on-write, eviction, caching patterns.",
+      "coreBuilds": "Redis clone (CodeCrafters, #11): RESP parser, TTL expiry, RDB parsing, master-replica replication. Then wire cache-aside into your own Go API.",
+      "dsaTarget": "Backtracking",
+      "courses": [
+        { "title": "Redis: The Complete Developer's Guide", "author": "Stephen Grider", "note": "gear 1: usage & patterns" },
+        { "title": "RESP wire spec + redis.io persistence/replication docs", "note": "gear 2 internals — short, free, better than any course for a clone" }
+      ],
+      "segments": [
+        {
+          "dayStart": 176, "dayEnd": 180, "dateStart": "2027-01-04", "dateEnd": "2027-01-08", "kind": "weekday", "label": "RESP & Event Loop",
+          "blocks": [
+            { "type": "DSA", "text": "Backtracking: subsets, state-space tree drawings." },
+            { "type": "BUILD", "text": "Start the Redis clone in Go: raw RESP parser (simple strings, errors, integers, bulk arrays)." },
+            { "type": "COURSE", "text": "RESP wire spec (redis.io) + Grider Redis — data-structure sections." }
+          ]
+        },
+        {
+          "dayStart": 181, "dayEnd": 182, "dateStart": "2027-01-09", "dateEnd": "2027-01-10", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "RESP parser → persistent TCP engine; command table for PING, SET, GET." },
+            { "type": "REVIEW", "day": "Sun", "text": "Why the single-threaded multiplexed event loop avoids locking bottlenecks." }
+          ]
+        },
+        {
+          "dayStart": 183, "dayEnd": 187, "dateStart": "2027-01-11", "dateEnd": "2027-01-15", "kind": "weekday", "label": "RESP & Event Loop",
+          "blocks": [
+            { "type": "DSA", "text": "Permutations generation and pruning." },
+            { "type": "BUILD", "text": "TTL key-expiry manager: active + passive background scanners without blocking the loop." },
+            { "type": "COURSE", "text": "Grider — expiration & key-management sections; redis.io hash-table/skiplist internals notes." }
+          ]
+        },
+        {
+          "dayStart": 188, "dayEnd": 189, "dateStart": "2027-01-16", "dateEnd": "2027-01-17", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "RDB snapshot parsing — reconstruct state on startup." },
+            { "type": "REVIEW", "day": "Sun", "text": "fork() copy-on-write during background RDB serialization." }
+          ]
+        },
+        {
+          "dayStart": 190, "dayEnd": 194, "dateStart": "2027-01-18", "dateEnd": "2027-01-22", "kind": "weekday", "label": "Replication & Caching Patterns",
+          "blocks": [
+            { "type": "DSA", "text": "Combination Sum variations, search-tree optimization." },
+            { "type": "BUILD", "text": "Master-replica architecture: replica handshake, stream updates over master sockets." },
+            { "type": "COURSE", "text": "redis.io replication docs; Grider — replication/cluster sections." }
+          ]
+        },
+        {
+          "dayStart": 195, "dayEnd": 196, "dateStart": "2027-01-23", "dateEnd": "2027-01-24", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Continuous command-propagation engine to downstream replicas." },
+            { "type": "REVIEW", "day": "Sun", "text": "Cache invalidation: cache-aside, write-through, thundering herd, stampede control (Grider caching-pattern sections)." }
+          ]
+        },
+        {
+          "dayStart": 197, "dayEnd": 201, "dateStart": "2027-01-25", "dateEnd": "2027-01-29", "kind": "weekday", "label": "Replication & Caching Patterns",
+          "blocks": [
+            { "type": "DSA", "text": "N-Queens, Word Search." },
+            { "type": "BUILD", "text": "LRU/LFU eviction + memory constraints. Then: add a cache-aside layer to your Module-3 Go API — real integration, real README material." },
+            { "type": "COURSE", "text": "Grider — eviction policies; whiteboard the full Redis data-path from memory." }
+          ]
+        },
+        {
+          "dayStart": 202, "dayEnd": 203, "dateStart": "2027-01-30", "dateEnd": "2027-01-31", "kind": "weekend", "label": "Module Wrap",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Finalize the Redis clone; README covering RESP parsing + replication." },
+            { "type": "REVIEW", "day": "Sun", "text": "Prep Checkpoint Week: list what to polish, book two mock interviews." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "L3 Checkpoint",
+      "weeksLabel": "Week 30",
+      "weekStart": 30,
+      "weekEnd": 30,
+      "summary": "The 7-month milestone. You now have: OS + networking fundamentals, deep Go, deep Node/TS, a production Go API, a TS fullstack service, SQL/Postgres competence, a Redis clone with caching integrated, and DSA through backtracking. That is a legitimate mid-level fullstack Go/Node profile.",
+      "courses": [],
+      "segments": [
+        {
+          "dayStart": 204, "dayEnd": 204, "dateStart": "2027-02-01", "dateEnd": "2027-02-01", "kind": "single", "label": "Monday",
+          "blocks": [
+            { "type": "BUILD", "text": "Polish flagship repo #6 (Go API): README, architecture diagram, one-command demo, CI badge." }
+          ]
+        },
+        {
+          "dayStart": 205, "dayEnd": 205, "dateStart": "2027-02-02", "dateEnd": "2027-02-02", "kind": "single", "label": "Tuesday",
+          "blocks": [
+            { "type": "BUILD", "text": "Polish flagship repo #8 (TS fullstack): same treatment. Pin both + best clones on GitHub profile." }
+          ]
+        },
+        {
+          "dayStart": 206, "dayEnd": 206, "dateStart": "2027-02-03", "dateEnd": "2027-02-03", "kind": "single", "label": "Wednesday",
+          "blocks": [
+            { "type": "CV", "text": "CV rewrite: lead with builds (\"Implemented a Redis-compatible server with master-replica replication in Go\"). Update LinkedIn." }
+          ]
+        },
+        {
+          "dayStart": 207, "dayEnd": 207, "dateStart": "2027-02-04", "dateEnd": "2027-02-04", "kind": "single", "label": "Thursday",
+          "blocks": [
+            { "type": "MOCK", "text": "Mock interview #1 (Pramp/peer): DSA, timed, out loud." }
+          ]
+        },
+        {
+          "dayStart": 208, "dayEnd": 208, "dateStart": "2027-02-05", "dateEnd": "2027-02-05", "kind": "single", "label": "Friday",
+          "blocks": [
+            { "type": "MOCK", "text": "Mock interview #2: practical fullstack — API design, SQL, live debugging." }
+          ]
+        },
+        {
+          "dayStart": 209, "dayEnd": 209, "dateStart": "2027-02-06", "dateEnd": "2027-02-06", "kind": "single", "label": "Saturday",
+          "blocks": [
+            { "type": "DRILL", "text": "System-design lite: whiteboard a URL shortener and a rate limiter end to end (enough for mid-level screens)." }
+          ]
+        },
+        {
+          "dayStart": 210, "dayEnd": 210, "dateStart": "2027-02-07", "dateEnd": "2027-02-07", "kind": "single", "label": "Sunday",
+          "blocks": [
+            { "type": "PLAN", "text": "Honest gap list. Decision: start applying now and run the rest of the plan in parallel (recommended — real interviews are the best training), or push to the capstone first. From here: at least one mock or real interview per week." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Messaging: Kafka + RabbitMQ + Build a Broker",
+      "weeksLabel": "Weeks 31–35",
+      "weekStart": 31,
+      "weekEnd": 35,
+      "summary": "Log-centric append-only design, partitions, offsets, ISR, delivery semantics, zero-copy, AMQP exchanges/bindings, push vs pull.",
+      "coreBuilds": "Kafka clone (CodeCrafters, #12) · segmented-log broker + consumer groups (#13) · mini AMQP broker (#14)",
+      "dsaTarget": "Graphs (BFS/DFS, topological sort, union-find)",
+      "courses": [
+        { "title": "Apache Kafka Series — Learn Apache Kafka for Beginners v3", "author": "Stéphane Maarek" },
+        { "title": "Apache Kafka Series — Kafka Cluster Setup & Administration", "author": "Maarek", "note": "ISR/KRaft depth" },
+        { "title": "Top-rated practical RabbitMQ course from your catalog", "note": "AMQP model is standard across all of them; you know RabbitMQ from Ucell production — this formalizes it" }
+      ],
+      "segments": [
+        {
+          "dayStart": 211, "dayEnd": 215, "dateStart": "2027-02-08", "dateEnd": "2027-02-12", "kind": "weekday", "label": "Kafka Log Architecture",
+          "blocks": [
+            { "type": "DSA", "text": "Graph structures: matrices, adjacency lists, DFS traversals." },
+            { "type": "BUILD", "text": "Start the Kafka clone in Go: binary protocol parser for ApiVersions requests." },
+            { "type": "COURSE", "text": "Maarek Beginners — topics, partitions, brokers, producers/consumers sections." }
+          ]
+        },
+        {
+          "dayStart": 216, "dayEnd": 217, "dateStart": "2027-02-13", "dateEnd": "2027-02-14", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Decode Produce and Fetch binary frames." },
+            { "type": "REVIEW", "day": "Sun", "text": "Zero-copy (sendfile) and how Kafka bypasses userspace (free Confluent deep-dive talk)." }
+          ]
+        },
+        {
+          "dayStart": 218, "dayEnd": 222, "dateStart": "2027-02-15", "dateEnd": "2027-02-19", "kind": "weekday", "label": "Kafka Log Architecture",
+          "blocks": [
+            { "type": "DSA", "text": "BFS shortest paths." },
+            { "type": "BUILD", "text": "Extend into a real segmented log storage engine: binary segments on disk + index trackers." },
+            { "type": "COURSE", "text": "Maarek — delivery semantics, replayability, consumer-group sections." }
+          ]
+        },
+        {
+          "dayStart": 223, "dayEnd": 224, "dateStart": "2027-02-20", "dateEnd": "2027-02-21", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Consumer offset management + consumer group registration tables." },
+            { "type": "REVIEW", "day": "Sun", "text": "ISR tracking, KRaft control plane (Cluster Setup & Administration sections)." }
+          ]
+        },
+        {
+          "dayStart": 225, "dayEnd": 229, "dateStart": "2027-02-22", "dateEnd": "2027-02-26", "kind": "weekday", "label": "Kafka Log Architecture",
+          "blocks": [
+            { "type": "DSA", "text": "Topological sort, dependency scheduling." },
+            { "type": "BUILD", "text": "Complete the Kafka-compatible broker; end-to-end streaming integration tests." },
+            { "type": "COURSE", "text": "Maarek — idempotent producers, exactly-once configuration sections." }
+          ]
+        },
+        {
+          "dayStart": 230, "dayEnd": 231, "dateStart": "2027-02-27", "dateEnd": "2027-02-28", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "High-quality README: binary framing + log structure." },
+            { "type": "REVIEW", "day": "Sun", "text": "Switch to push-based routing; sketch the AMQP broker layout." }
+          ]
+        },
+        {
+          "dayStart": 232, "dayEnd": 236, "dateStart": "2027-03-01", "dateEnd": "2027-03-05", "kind": "weekday", "label": "AMQP Broker & Push vs Pull",
+          "blocks": [
+            { "type": "DSA", "text": "Union-Find / Disjoint Set." },
+            { "type": "BUILD", "text": "Mini AMQP broker in Go: Direct, Fanout, and Topic exchanges." },
+            { "type": "COURSE", "text": "RabbitMQ course — exchanges, bindings, queues sections." }
+          ]
+        },
+        {
+          "dayStart": 237, "dayEnd": 238, "dateStart": "2027-03-06", "dateEnd": "2027-03-07", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Dynamic in-memory binding tables; wildcard routing tokens." },
+            { "type": "REVIEW", "day": "Sun", "text": "Backpressure, prefetch, consumer push-loop bottlenecks (RabbitMQ course QoS sections)." }
+          ]
+        },
+        {
+          "dayStart": 239, "dayEnd": 243, "dateStart": "2027-03-08", "dateEnd": "2027-03-12", "kind": "weekday", "label": "AMQP Broker & Push vs Pull",
+          "blocks": [
+            { "type": "DSA", "text": "Cycle detection, islands." },
+            { "type": "BUILD", "text": "Consumer acknowledgments + dead-letter queue routing." },
+            { "type": "COURSE", "text": "RabbitMQ course — acks & DLQ sections; whiteboard Kafka vs RabbitMQ use cases cold." }
+          ]
+        },
+        {
+          "dayStart": 244, "dayEnd": 245, "dateStart": "2027-03-13", "dateEnd": "2027-03-14", "kind": "weekend", "label": "Module Wrap",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Wrap the AMQP broker; document the design." },
+            { "type": "REVIEW", "day": "Sun", "text": "Prep the RPC/proxy playground for Module 9." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "gRPC + Nginx/Envoy + Build a Proxy",
+      "weeksLabel": "Weeks 36–38",
+      "weekStart": 36,
+      "weekEnd": 38,
+      "summary": "Protobuf wire layout (varints, wire types), HTTP/2 multiplexing, load-balancing algorithms, health checks, Envoy xDS.",
+      "coreBuilds": "gRPC Go services (unary + bidi streaming, interceptors) · custom reverse proxy / load balancer (#15)",
+      "dsaTarget": "Advanced graphs (Dijkstra, Prim/Kruskal) → 2D DP intro",
+      "courses": [
+        { "title": "gRPC [Golang] Master Class: Build Modern API & Microservices", "author": "Stéphane Maarek" },
+        { "title": "NGINX Fundamentals: High Performance Servers from Scratch", "note": "or Hussein Nasser's NGINX course" },
+        { "title": "Envoy/xDS", "note": "no strong Udemy course — official Envoy docs + \"Life of a Request in Envoy\" talk" }
+      ],
+      "segments": [
+        {
+          "dayStart": 246, "dayEnd": 250, "dateStart": "2027-03-15", "dateEnd": "2027-03-19", "kind": "weekday", "label": "Protobuf & Load Balancer",
+          "blocks": [
+            { "type": "DSA", "text": "Dijkstra shortest paths." },
+            { "type": "BUILD", "text": "Protobuf service contracts; unary + bidirectional streaming RPCs in Go (these become your capstone contracts)." },
+            { "type": "COURSE", "text": "Maarek gRPC — protobuf, varints & wire types, unary/streaming sections." }
+          ]
+        },
+        {
+          "dayStart": 251, "dayEnd": 252, "dateStart": "2027-03-20", "dateEnd": "2027-03-21", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Interceptor middleware: deadlines, timeouts, metadata." },
+            { "type": "REVIEW", "day": "Sun", "text": "HTTP/2 transport internals: framing, flow-control windows, stream multiplexing (revisit Nasser's HTTP/2 sections)." }
+          ]
+        },
+        {
+          "dayStart": 253, "dayEnd": 257, "dateStart": "2027-03-22", "dateEnd": "2027-03-26", "kind": "weekday", "label": "Protobuf & Load Balancer",
+          "blocks": [
+            { "type": "DSA", "text": "MST (Prim's / Kruskal's)." },
+            { "type": "BUILD", "text": "Start the reverse proxy / load balancer in Go: low-level HTTP request forwarding." },
+            { "type": "COURSE", "text": "NGINX Fundamentals — reverse-proxy architecture, connection pooling sections." }
+          ]
+        },
+        {
+          "dayStart": 258, "dayEnd": 259, "dateStart": "2027-03-27", "dateEnd": "2027-03-28", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Round-Robin + Weighted Least-Connections across live targets." },
+            { "type": "REVIEW", "day": "Sun", "text": "Circuit breaking, backpressure, passive health scans (NGINX LB sections)." }
+          ]
+        },
+        {
+          "dayStart": 260, "dayEnd": 264, "dateStart": "2027-03-29", "dateEnd": "2027-04-02", "kind": "weekday", "label": "Protobuf & Load Balancer",
+          "blocks": [
+            { "type": "DSA", "text": "2D DP intro: grid pathing." },
+            { "type": "BUILD", "text": "Active health checks + retry loops; graceful target-pool recovery." },
+            { "type": "COURSE", "text": "Envoy xDS control plane docs; sidecar mesh paradigm (\"Life of a Request in Envoy\")." }
+          ]
+        },
+        {
+          "dayStart": 265, "dayEnd": 266, "dateStart": "2027-04-03", "dateEnd": "2027-04-04", "kind": "weekend", "label": "Module Wrap",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Complete the LB; benchmark under simulated backend failures." },
+            { "type": "REVIEW", "day": "Sun", "text": "Install namespace/cgroup tooling for Module 10." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Containers, Kubernetes, Observability",
+      "weeksLabel": "Weeks 39–42",
+      "weekStart": 39,
+      "weekEnd": 42,
+      "summary": "Linux namespaces, cgroups, chroot, OCI/runc, K8s control plane, PromQL, distributed tracing.",
+      "coreBuilds": "Container runtime (CodeCrafters, #16) · instrument your clones + Go API with Prometheus and OpenTelemetry",
+      "dsaTarget": "DP deep dive (1D/2D, knapsack, LIS, edit distance)",
+      "courses": [
+        { "title": "Docker Mastery: with Kubernetes + Swarm", "author": "Bret Fisher" },
+        { "title": "Certified Kubernetes Administrator (CKA) with Practice Tests", "author": "Mumshad Mannambeth", "note": "the Kubernetes course; do it even if you never sit the exam" },
+        { "title": "Prometheus Certified Associate (PCA) prep", "author": "KodeKloud/Mumshad", "note": "or top-rated Prometheus & Grafana course" },
+        { "title": "OpenTelemetry", "note": "catalog is young — any OTel course, or official OTel docs + demo app" }
+      ],
+      "segments": [
+        {
+          "dayStart": 267, "dayEnd": 271, "dateStart": "2027-04-05", "dateEnd": "2027-04-09", "kind": "weekday", "label": "Container Runtime From Syscalls Up",
+          "blocks": [
+            { "type": "DSA", "text": "1D DP: sequence optimization." },
+            { "type": "BUILD", "text": "Start CodeCrafters container runtime in Go: process isolation via exec.Command flags." },
+            { "type": "COURSE", "text": "Docker Mastery — image layers, union filesystems sections." }
+          ]
+        },
+        {
+          "dayStart": 272, "dayEnd": 273, "dateStart": "2027-04-10", "dateEnd": "2027-04-11", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Linux namespaces (PID, NET, MNT, UTS) via syscalls." },
+            { "type": "REVIEW", "day": "Sun", "text": "Cgroup filesystem trees (/sys/fs/cgroup) — man pages are the real course here." }
+          ]
+        },
+        {
+          "dayStart": 274, "dayEnd": 278, "dateStart": "2027-04-12", "dateEnd": "2027-04-16", "kind": "weekday", "label": "Container Runtime From Syscalls Up",
+          "blocks": [
+            { "type": "DSA", "text": "1D DP: Longest Increasing Subsequence." },
+            { "type": "BUILD", "text": "Cgroup CPU + memory enforcement on the runtime." },
+            { "type": "COURSE", "text": "Man pages: chroot(), capabilities, seccomp; Docker Mastery internals sections for context." }
+          ]
+        },
+        {
+          "dayStart": 279, "dayEnd": 280, "dateStart": "2027-04-17", "dateEnd": "2027-04-18", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Complete the runtime; run isolated sandbox shells from a raw root directory." },
+            { "type": "REVIEW", "day": "Sun", "text": "OCI/containerd model. Plan the K8s + observability half." }
+          ]
+        },
+        {
+          "dayStart": 281, "dayEnd": 285, "dateStart": "2027-04-19", "dateEnd": "2027-04-23", "kind": "weekday", "label": "Kubernetes & Observability",
+          "blocks": [
+            { "type": "DSA", "text": "2D DP: knapsack." },
+            { "type": "BUILD", "text": "Embed Prometheus metrics into your Redis + Kafka clones and Go API." },
+            { "type": "COURSE", "text": "CKA (Mumshad) — architecture, reconciliation loops, scheduling, CNI sections + labs." }
+          ]
+        },
+        {
+          "dayStart": 286, "dayEnd": 287, "dateStart": "2027-04-24", "dateEnd": "2027-04-25", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "OpenTelemetry tracing spans across services, down to the socket layer." },
+            { "type": "REVIEW", "day": "Sun", "text": "RED/USE patterns, SLI/SLO calculations (Prometheus course sections)." }
+          ]
+        },
+        {
+          "dayStart": 288, "dayEnd": 292, "dateStart": "2027-04-26", "dateEnd": "2027-04-30", "kind": "weekday", "label": "Kubernetes & Observability",
+          "blocks": [
+            { "type": "DSA", "text": "2D DP: edit distance." },
+            { "type": "BUILD", "text": "Prometheus + Grafana + Jaeger stack; dashboards for your clones' telemetry." },
+            { "type": "COURSE", "text": "Prometheus course — PromQL, alerting, Grafana sections; Linux perf tools (strace, lsof, iostat, vmstat) via man pages." }
+          ]
+        },
+        {
+          "dayStart": 293, "dayEnd": 294, "dateStart": "2027-05-01", "dateEnd": "2027-05-02", "kind": "weekend", "label": "Module Wrap",
+          "blocks": [
+            { "type": "BUILD", "day": "Sat", "text": "Verify metrics + spans under stress tests; telemetry writeup in the repo." },
+            { "type": "REVIEW", "day": "Sun", "text": "Prep system-design drills." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "System Design Deep",
+      "weeksLabel": "Weeks 43–45",
+      "weekStart": 43,
+      "weekEnd": 45,
+      "summary": "CAP/PACELC, sharding/partitioning, consistent hashing, Raft, replication topologies. Your edge: you've written the cache, the broker, and the LB everyone else only names.",
+      "dsaTarget": "Mixed timed sets across ALL patterns (strict interview simulation)",
+      "courses": [
+        { "title": "Mastering the System Design Interview", "author": "Frank Kane" },
+        { "title": "Nasser's backend + database courses (revisit)", "author": "Hussein Nasser", "note": "PACELC/replication/sharding theory" },
+        { "title": "ByteByteGo", "author": "Alex Xu", "note": "free YouTube — payment systems & event logs; no Udemy presence" }
+      ],
+      "segments": [
+        {
+          "dayStart": 295, "dayEnd": 299, "dateStart": "2027-05-03", "dateEnd": "2027-05-07", "kind": "weekday", "label": "Architecture Drills",
+          "blocks": [
+            { "type": "DSA", "text": "Mixed Timed Set 1 (arrays, windows, trees)." },
+            { "type": "DRILL", "text": "Full whiteboard designs: URL shortener, rate limiter, news feed — with constraints and capacity math." },
+            { "type": "COURSE", "text": "Frank Kane — rate limiters, consistent hashing sections." }
+          ]
+        },
+        {
+          "dayStart": 300, "dayEnd": 301, "dateStart": "2027-05-08", "dateEnd": "2027-05-09", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "DRILL", "day": "Sat", "text": "Real-time chat architecture: connection management, state handling." },
+            { "type": "REVIEW", "day": "Sun", "text": "CAP/PACELC, sharding strategies, Raft (Nasser replication/sharding sections + a Raft visualization)." }
+          ]
+        },
+        {
+          "dayStart": 302, "dayEnd": 306, "dateStart": "2027-05-10", "dateEnd": "2027-05-14", "kind": "weekday", "label": "Architecture Drills",
+          "blocks": [
+            { "type": "DSA", "text": "Mixed Timed Set 2 (graphs, heaps)." },
+            { "type": "DRILL", "text": "Distributed cache layer; search autocomplete infrastructure." },
+            { "type": "COURSE", "text": "Frank Kane — caching, autocomplete, news-feed sections." }
+          ]
+        },
+        {
+          "dayStart": 307, "dayEnd": 308, "dateStart": "2027-05-15", "dateEnd": "2027-05-16", "kind": "weekend", "label": "Weekend",
+          "blocks": [
+            { "type": "DRILL", "day": "Sat", "text": "Payment system + high-throughput event log designs." },
+            { "type": "REVIEW", "day": "Sun", "text": "Consensus protocols recap; ByteByteGo payment/event-log videos." }
+          ]
+        },
+        {
+          "dayStart": 309, "dayEnd": 313, "dateStart": "2027-05-17", "dateEnd": "2027-05-21", "kind": "weekday", "label": "Architecture Drills",
+          "blocks": [
+            { "type": "DSA", "text": "Mixed Timed Set 3 (hard DP + backtracking)." },
+            { "type": "DRILL", "text": "Compile a personal design-notes repo; redraw every system from memory." },
+            { "type": "COURSE", "text": "Re-watch weak-spot sections at 2x; ByteByteGo deep-dives." }
+          ]
+        },
+        {
+          "dayStart": 314, "dayEnd": 315, "dateStart": "2027-05-22", "dateEnd": "2027-05-23", "kind": "weekend", "label": "Module Wrap",
+          "blocks": [
+            { "type": "DRILL", "day": "Sat", "text": "Draw and defend any layout under pressure — test yourself cold." },
+            { "type": "REVIEW", "day": "Sun", "text": "Finalize deployment templates. Capstone starts tomorrow." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Capstone + Interview Mode",
+      "weeksLabel": "Weeks 46–52",
+      "weekStart": 46,
+      "weekEnd": 52,
+      "summary": "Tie everything into a resilient, production-grade distributed system and switch to interview delivery mode. Capstone: 3 Go microservices over gRPC · Postgres · Redis cache-aside · Kafka backbone · your custom LB in front · Kubernetes · Prometheus + OTel · TS BFF + thin React on top. Standing rhythm: mock interviews Tue & Thu evenings; DSA = mixed timed sets, out loud. No course slot — the 30m goes to STAR-story rehearsal and mock-interview review.",
+      "courses": [],
+      "segments": [
+        {
+          "dayStart": 316, "dayEnd": 320, "dateStart": "2027-05-24", "dateEnd": "2027-05-28", "kind": "weekday",
+          "blocks": [
+            { "type": "BUILD", "text": "Scaffold the 3 Go microservices; define gRPC contracts; wire inter-service pipelines." },
+            { "type": "MOCK", "text": "Mocks Tue/Thu. Story work: draft STAR stories 1–5." }
+          ]
+        },
+        {
+          "dayStart": 321, "dayEnd": 321, "dateStart": "2027-05-29", "dateEnd": "2027-05-29", "kind": "single", "label": "Saturday",
+          "blocks": [
+            { "type": "BUILD", "text": "Postgres integration: migrations, indexing, connection pooling." }
+          ]
+        },
+        {
+          "dayStart": 322, "dayEnd": 322, "dateStart": "2027-05-30", "dateEnd": "2027-05-30", "kind": "single", "label": "Sunday",
+          "blocks": [
+            { "type": "REVIEW", "text": "Verify data safety under simulated network-split tests." }
+          ]
+        },
+        {
+          "dayStart": 323, "dayEnd": 327, "dateStart": "2027-05-31", "dateEnd": "2027-06-04", "kind": "weekday",
+          "blocks": [
+            { "type": "BUILD", "text": "Core business logic across services; Redis cache-aside layer." },
+            { "type": "MOCK", "text": "Mocks Tue/Thu. STAR stories 6–10, mapped to competencies." }
+          ]
+        },
+        {
+          "dayStart": 328, "dayEnd": 328, "dateStart": "2027-06-05", "dateEnd": "2027-06-05", "kind": "single", "label": "Saturday",
+          "blocks": [
+            { "type": "BUILD", "text": "Kafka event backbone: producers, partition strategy." }
+          ]
+        },
+        {
+          "dayStart": 329, "dayEnd": 329, "dateStart": "2027-06-06", "dateEnd": "2027-06-06", "kind": "single", "label": "Sunday",
+          "blocks": [
+            { "type": "REVIEW", "text": "Consumer offset design review; failure-mode notes." }
+          ]
+        },
+        {
+          "dayStart": 330, "dayEnd": 334, "dateStart": "2027-06-07", "dateEnd": "2027-06-11", "kind": "weekday",
+          "blocks": [
+            { "type": "BUILD", "text": "Wire Kafka consumers end to end; partition-level offset tracking." },
+            { "type": "MOCK", "text": "Mocks Tue/Thu." }
+          ]
+        },
+        {
+          "dayStart": 335, "dayEnd": 335, "dateStart": "2027-06-12", "dateEnd": "2027-06-12", "kind": "single", "label": "Saturday",
+          "blocks": [
+            { "type": "BUILD", "text": "Put your custom reverse proxy/LB in front of the services." }
+          ]
+        },
+        {
+          "dayStart": 336, "dayEnd": 336, "dateStart": "2027-06-13", "dateEnd": "2027-06-13", "kind": "single", "label": "Sunday",
+          "blocks": [
+            { "type": "REVIEW", "text": "Performance analysis; profile memory under high-volume load." }
+          ]
+        },
+        {
+          "dayStart": 337, "dayEnd": 341, "dateStart": "2027-06-14", "dateEnd": "2027-06-18", "kind": "weekday",
+          "blocks": [
+            { "type": "BUILD", "text": "Hardening: retries, idempotency keys, timeouts, chaos tests." },
+            { "type": "MOCK", "text": "Rehearse STAR stories out loud — under 3 minutes each." }
+          ]
+        },
+        {
+          "dayStart": 342, "dayEnd": 342, "dateStart": "2027-06-19", "dateEnd": "2027-06-19", "kind": "single", "label": "Saturday",
+          "blocks": [
+            { "type": "BUILD", "text": "Containerize the entire topology." }
+          ]
+        },
+        {
+          "dayStart": 343, "dayEnd": 343, "dateStart": "2027-06-20", "dateEnd": "2027-06-20", "kind": "single", "label": "Sunday",
+          "blocks": [
+            { "type": "REVIEW", "text": "Full docker-compose verification of every service path." }
+          ]
+        },
+        {
+          "dayStart": 344, "dayEnd": 348, "dateStart": "2027-06-21", "dateEnd": "2027-06-25", "kind": "weekday",
+          "blocks": [
+            { "type": "BUILD", "text": "Deploy to Kubernetes; configure scaling boundaries and probes." },
+            { "type": "MOCK", "text": "Heavy system-design mocks — leverage your internals knowledge as the edge." }
+          ]
+        },
+        {
+          "dayStart": 349, "dayEnd": 349, "dateStart": "2027-06-26", "dateEnd": "2027-06-26", "kind": "single", "label": "Saturday",
+          "blocks": [
+            { "type": "BUILD", "text": "Full monitoring suite: Prometheus collections, Grafana dashboards, OTel spans." }
+          ]
+        },
+        {
+          "dayStart": 350, "dayEnd": 350, "dateStart": "2027-06-27", "dateEnd": "2027-06-27", "kind": "single", "label": "Sunday",
+          "blocks": [
+            { "type": "REVIEW", "text": "Verify service discovery + cross-node network metrics; SLO dashboards." }
+          ]
+        },
+        {
+          "dayStart": 351, "dayEnd": 355, "dateStart": "2027-06-28", "dateEnd": "2027-07-02", "kind": "weekday",
+          "blocks": [
+            { "type": "BUILD", "text": "Connect the TS Node BFF + React front; end-to-end user-path verification." },
+            { "type": "CV", "text": "Resume final pass: capstone on top, then mini-builds." }
+          ]
+        },
+        {
+          "dayStart": 356, "dayEnd": 356, "dateStart": "2027-07-03", "dateEnd": "2027-07-03", "kind": "single", "label": "Saturday",
+          "blocks": [
+            { "type": "BUILD", "text": "Load tests through the full path (proxy → services → Kafka/Redis/Postgres)." }
+          ]
+        },
+        {
+          "dayStart": 357, "dayEnd": 357, "dateStart": "2027-07-04", "dateEnd": "2027-07-04", "kind": "single", "label": "Sunday",
+          "blocks": [
+            { "type": "BUILD", "text": "Fix everything the load tests exposed." }
+          ]
+        },
+        {
+          "dayStart": 358, "dayEnd": 362, "dateStart": "2027-07-05", "dateEnd": "2027-07-09", "kind": "weekday", "label": "The Finish Line",
+          "blocks": [
+            { "type": "DSA", "text": "Rapid-fire mixed drills under strict timing." },
+            { "type": "BUILD", "text": "Final documentation: architecture diagrams, live dashboards, runbooks." }
+          ]
+        },
+        {
+          "dayStart": 363, "dayEnd": 363, "dateStart": "2027-07-10", "dateEnd": "2027-07-10", "kind": "single", "label": "Saturday",
+          "blocks": [
+            { "type": "BUILD", "text": "Complete the capstone. Publish the live, production-monitored, beautifully documented codebase on GitHub." }
+          ]
+        },
+        {
+          "dayStart": 364, "dayEnd": 364, "dateStart": "2027-07-11", "dateEnd": "2027-07-11", "kind": "single", "label": "Sunday",
+          "blocks": [
+            { "type": "PLAN", "text": "Step back. Review the full portfolio: 17 builds, a distributed capstone, a year of math momentum. You are interview-ready far beyond the L3 bar. Ship it." }
+          ]
+        }
+      ]
+    }
+  ]
+}
