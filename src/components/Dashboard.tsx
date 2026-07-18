@@ -1,4 +1,4 @@
-import { CalendarDays, Flame, GraduationCap, Hammer, Hourglass } from 'lucide-react'
+import { CalendarDays, Flame, GraduationCap, Hammer, Hourglass, Sparkles } from 'lucide-react'
 import {
   Area,
   AreaChart,
@@ -16,7 +16,7 @@ import { fmtDate, parseISO, startOfToday, diffDays } from '../lib/date'
 import { t } from '../lib/i18n'
 import type { Metrics } from '../lib/metrics'
 import { DayCard } from './day'
-import { Card, ProgressBar, Ring, SectionTitle, StatTile } from './ui'
+import { Badge, Card, ProgressBar, Ring, SectionTitle, StatTile } from './ui'
 
 const tooltipStyle = {
   background: 'var(--color-surface-2)',
@@ -42,6 +42,49 @@ export function Dashboard({
 
   return (
     <div className="flex flex-col gap-5">
+      {/* Today — the first thing you see: what to do right now */}
+      <section className="animate-fade-up flex flex-col gap-2">
+        <SectionTitle
+          right={
+            m.hasStarted && !m.finished && m.todayEntry ? (
+              <Badge color="var(--color-primary)">Kun {m.currentDay}</Badge>
+            ) : undefined
+          }
+        >
+          {t.today.title}
+        </SectionTitle>
+        {!m.hasStarted ? (
+          <Card className="p-5 text-sm text-[var(--color-muted)]">
+            {t.today.notStarted} · {fmtDate(parseISO(plan.meta.startDate))}
+          </Card>
+        ) : m.finished ? (
+          <Card className="p-5 text-sm font-semibold text-[var(--color-accent)]">
+            {t.today.finished}
+          </Card>
+        ) : m.todayEntry ? (
+          <>
+            {m.doneBlocks === 0 && (
+              <div className="flex items-start gap-2 rounded-xl border border-[color-mix(in_srgb,var(--color-primary)_35%,transparent)] bg-[color-mix(in_srgb,var(--color-primary)_10%,transparent)] px-4 py-3">
+                <Sparkles size={16} className="mt-0.5 flex-shrink-0 text-[var(--color-primary)]" />
+                <p className="text-[13px] leading-relaxed text-[var(--color-fg)]">
+                  Boshlash uchun quyidagi bloklarni bajarib, ustiga bosing. Progress, streak va
+                  foizlar avtomatik hisoblanadi.
+                </p>
+              </div>
+            )}
+            <DayCard
+              entry={m.todayEntry}
+              done={done}
+              onToggle={onToggle}
+              onSetKeys={onSetKeys}
+              highlight
+            />
+          </>
+        ) : (
+          <Card className="p-5 text-sm text-[var(--color-muted)]">{t.today.none}</Card>
+        )}
+      </section>
+
       {/* KPI tiles */}
       <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-5">
         <StatTile
@@ -96,47 +139,22 @@ export function Dashboard({
       </div>
 
       <div className="grid gap-5 lg:grid-cols-3">
-        {/* Ring + today */}
-        <div className="flex flex-col gap-5">
-          <Card className="flex flex-col items-center p-5">
-            <Ring pct={m.overallPct}>
-              <div>
-                <div className="tnum text-4xl font-extrabold text-[var(--color-fg)]">
-                  {m.overallPct}%
-                </div>
-                <div className="text-[11px] tracking-wide text-[var(--color-muted)] uppercase">
-                  {t.kpi.overall}
-                </div>
+        {/* Overall ring */}
+        <Card className="flex flex-col items-center justify-center p-5">
+          <Ring pct={m.overallPct}>
+            <div>
+              <div className="tnum text-4xl font-extrabold text-[var(--color-fg)]">
+                {m.overallPct}%
               </div>
-            </Ring>
-            <div className="mt-2 text-center text-xs text-[var(--color-faint)]">
-              {plan.meta.checkpoint.label}
+              <div className="text-[11px] tracking-wide text-[var(--color-muted)] uppercase">
+                {t.kpi.overall}
+              </div>
             </div>
-          </Card>
-
-          <div>
-            <SectionTitle>{t.today.title}</SectionTitle>
-            {!m.hasStarted ? (
-              <Card className="p-5 text-sm text-[var(--color-muted)]">
-                {t.today.notStarted} · {fmtDate(parseISO(plan.meta.startDate))}
-              </Card>
-            ) : m.finished ? (
-              <Card className="p-5 text-sm text-[var(--color-accent)]">
-                {t.today.finished}
-              </Card>
-            ) : m.todayEntry ? (
-              <DayCard
-                entry={m.todayEntry}
-                done={done}
-                onToggle={onToggle}
-                onSetKeys={onSetKeys}
-                highlight
-              />
-            ) : (
-              <Card className="p-5 text-sm text-[var(--color-muted)]">{t.today.none}</Card>
-            )}
+          </Ring>
+          <div className="mt-2 text-center text-xs text-[var(--color-faint)]">
+            {plan.meta.checkpoint.label}
           </div>
-        </div>
+        </Card>
 
         {/* Charts */}
         <div className="flex flex-col gap-5 lg:col-span-2">

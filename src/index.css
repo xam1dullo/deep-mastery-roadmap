@@ -22,7 +22,8 @@
   --color-warn: #f59e0b;
   --color-danger: #ef4444;
 
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-sans: 'Geist', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'SF Mono', monospace;
 }
 
 @layer base {
@@ -38,13 +39,21 @@
     background: var(--color-bg);
     color: var(--color-fg);
     font-family: var(--font-sans);
+    letter-spacing: -0.011em;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01';
   }
-  /* tabular figures for all metrics */
+  /* mono tabular figures for metrics — dev-tool feel, no layout shift */
   .tnum {
+    font-family: var(--font-mono);
     font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.02em;
+    text-wrap: balance;
   }
   :focus-visible {
     outline: 2px solid var(--color-primary);
@@ -81,11 +90,38 @@
   animation: fade-up 0.35s ease-out both;
 }
 
+/* staggered list/grid entrance — set --i per item */
+.stagger {
+  animation: fade-up 0.4s ease-out both;
+  animation-delay: calc(var(--i, 0) * 45ms);
+}
+
+/* subtle grain overlay for depth (skill: flat feels sterile) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* View Transitions API — smooth crossfade on tab/track switch */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 220ms;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
   }
 }

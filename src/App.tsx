@@ -15,6 +15,7 @@ import { Dashboard } from './components/Dashboard'
 import { DevOps } from './components/DevOps'
 import { Interviews } from './components/Interviews'
 import { MathTrack } from './components/MathTrack'
+import { Onboarding } from './components/Onboarding'
 import { Roadmap } from './components/Roadmap'
 import { computeCurriculumMetrics } from './lib/curriculum'
 import { t } from './lib/i18n'
@@ -44,8 +45,32 @@ const NAV_CURRICULUM: NavItem[] = [
 export default function App() {
   const [trackId, setTrackId] = useState<string>(DEFAULT_TRACK_ID)
   const [tab, setTab] = useState<Tab>('dashboard')
+  const [onboard, setOnboard] = useState(() => {
+    try {
+      return !localStorage.getItem('dmr:onboarded:v1')
+    } catch {
+      return false
+    }
+  })
   const track = trackById(trackId)
   const store = useProgress(trackId)
+
+  // View Transitions API — smooth crossfade on tab/track switch (progressive).
+  const startVT = (fn: () => void) => {
+    const d = document as Document & { startViewTransition?: (cb: () => void) => void }
+    if (d.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      d.startViewTransition(fn)
+    } else fn()
+  }
+  const go = (id: Tab) => startVT(() => setTab(id))
+  const finishOnboard = () => {
+    setOnboard(false)
+    try {
+      localStorage.setItem('dmr:onboarded:v1', '1')
+    } catch {
+      /* ignore */
+    }
+  }
 
   const days = useMemo(() => expandDays(plan), [])
   const scheduleMetrics = useMemo(
@@ -60,10 +85,11 @@ export default function App() {
     [track, store.progress],
   )
 
-  const switchTrack = (id: string) => {
-    setTrackId(id)
-    setTab('dashboard')
-  }
+  const switchTrack = (id: string) =>
+    startVT(() => {
+      setTrackId(id)
+      setTab('dashboard')
+    })
 
   const nav = track.kind === 'schedule' ? NAV_SCHEDULE : NAV_CURRICULUM
 
@@ -139,6 +165,13 @@ export default function App() {
 
   return (
     <div className="min-h-dvh lg:flex">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:rounded-lg focus:bg-[var(--color-primary)] focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-[var(--color-on-primary)]"
+      >
+        Asosiy kontentga o'tish
+      </a>
+      {onboard && <Onboarding onDone={finishOnboard} />}
       {/* Sidebar (desktop) */}
       <aside className="sticky top-0 hidden h-dvh w-60 flex-shrink-0 flex-col border-r border-[var(--color-border)] bg-[var(--color-surface)] p-4 lg:flex">
         <div className="mb-5 flex items-center gap-2.5 px-2">
@@ -160,7 +193,7 @@ export default function App() {
           {nav.map(({ id, label, Icon }) => (
             <button
               key={id}
-              onClick={() => setTab(id)}
+              onClick={() => go(id)}
               aria-current={tab === id}
               className={`flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
                 tab === id
@@ -209,7 +242,7 @@ export default function App() {
             {nav.map(({ id, label, Icon }) => (
               <button
                 key={id}
-                onClick={() => setTab(id)}
+                onClick={() => go(id)}
                 aria-current={tab === id}
                 className="flex flex-shrink-0 items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium whitespace-nowrap transition-colors"
                 style={
@@ -225,7 +258,11 @@ export default function App() {
           </nav>
         </header>
 
-        <main className="mx-auto w-full max-w-6xl flex-1 p-4 md:p-6">
+        <main
+          id="main"
+          tabIndex={-1}
+          className="mx-auto w-full max-w-6xl flex-1 p-4 outline-none md:p-6"
+        >
           {track.kind === 'curriculum' ? (
             tab === 'backup' ? (
               <Backup
